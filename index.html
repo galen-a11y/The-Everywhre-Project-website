@@ -319,6 +319,50 @@ footer{background:var(--paper);border-top:1px solid var(--hairline);padding:var(
   .wide img{aspect-ratio:4/3}
   .panel.has-img{padding:var(--s6) var(--s5);gap:var(--s6)}
 }
+
+/* RESOURCES */
+.chips{display:flex;flex-wrap:wrap;gap:var(--s2);margin-bottom:var(--s6)}
+.chip{font:600 15px/20px var(--sans);padding:10px 18px;min-height:44px;border-radius:var(--r-pill);border:1px solid var(--border-strong);background:var(--surface);color:var(--ink);cursor:pointer}
+.chip:hover{border-color:var(--teal-700);color:var(--teal-800)}
+.chip[aria-pressed="true"]{background:var(--teal-700);border-color:var(--teal-700);color:var(--on-teal)}
+.res{background:var(--surface);border:1px solid var(--hairline);border-radius:var(--r-md);overflow:hidden;display:flex;flex-direction:column}
+.res-open{display:block;border:0;padding:0;background:var(--paper);cursor:pointer;width:100%}
+.res-thumb{display:grid;place-items:center;aspect-ratio:4/3;padding:var(--s4)}
+.res-thumb img{max-width:100%;max-height:100%;object-fit:contain;border-radius:6px;box-shadow:var(--shadow);transition:transform .2s}
+.res-open:hover img{transform:translateY(-3px)}
+.res-body{padding:var(--s5);display:flex;flex-direction:column;gap:var(--s2);flex:1}
+.res-body .eyebrow{margin:0}
+.res-body h3{font-size:20px;line-height:28px}
+.res-body p{color:var(--ink-muted);flex:1}
+.res-meta{font-size:13px;line-height:18px;color:var(--ink-muted)}
+.res-act{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s3)}
+.res-act .btn{min-height:44px;padding:10px 18px;font-size:15px}
+.train{flex-direction:row;align-items:center;gap:var(--s5);margin-top:var(--s7)}
+.train>div{flex:1}
+.train p{margin-top:4px}
+#viewer{border:0;padding:0;margin:auto;width:min(980px,96vw);height:min(92vh,1200px);max-width:none;max-height:none;border-radius:var(--r-lg);background:var(--paper);color:var(--ink);overflow:hidden;box-shadow:var(--shadow)}
+#viewer[open]{display:flex;flex-direction:column}
+#viewer::backdrop{background:rgba(29,30,33,.55)}
+.v-bar{display:flex;align-items:center;justify-content:space-between;gap:var(--s4);padding:var(--s4) var(--s5);background:var(--surface);border-bottom:1px solid var(--hairline)}
+.v-head{min-width:0}
+.v-head .eyebrow{margin-bottom:2px}
+.v-head h2{font-size:20px;line-height:26px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.v-act{display:flex;align-items:center;gap:var(--s2);flex:none}
+.v-x{width:48px;height:48px;border-radius:50%;border:1px solid var(--hairline);background:var(--surface);color:var(--ink);display:grid;place-items:center;cursor:pointer}
+.v-x:hover{border-color:var(--teal-700);color:var(--teal-700)}
+.v-pages{flex:1;overflow:auto;padding:var(--s5);display:flex;flex-direction:column;align-items:center;gap:var(--s4);-webkit-overflow-scrolling:touch}
+.v-pages canvas{display:block;max-width:100%;height:auto;background:#fff;border-radius:6px;box-shadow:var(--shadow)}
+.v-status{margin:auto;text-align:center;color:var(--ink-muted);max-width:420px}
+.v-status .btn{margin-top:var(--s4)}
+@media (max-width:640px){
+  .train{flex-direction:column;align-items:flex-start}
+  #viewer{width:100vw;height:100dvh;max-height:none;border-radius:0}
+  .v-bar{padding:var(--s3) var(--s4)}
+  .v-head h2{font-size:17px;line-height:22px}
+  .v-act .btn{padding:10px 14px}
+  .v-act .btn .lbl{display:none}
+  .v-pages{padding:var(--s3)}
+}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -342,6 +386,9 @@ footer{background:var(--paper);border-top:1px solid var(--hairline);padding:var(
   <symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></symbol>
   <symbol id="i-insta" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
   <symbol id="i-cart" viewBox="0 0 24 24"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.06 12.35a1 1 0 0 1 0-.7 10.75 10.75 0 0 1 19.88 0 1 1 0 0 1 0 .7 10.75 10.75 0 0 1-19.88 0"/><circle cx="12" cy="12" r="3"/></symbol>
   <symbol id="i-mark" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#fff" stroke="#363635" stroke-width="3"/><circle cx="24" cy="24" r="15" fill="none" stroke="#363635" stroke-width="1.2" stroke-dasharray="2 3"/><path d="M24 33.5l-8.2-7.9c-2.4-2.3-2.4-6.2 0-8.3 2.2-1.9 5.4-1.5 8.2 1.6 2.8-3.1 6-3.5 8.2-1.6 2.4 2.1 2.4 6 0 8.3z" fill="#363635"/></symbol>
 </svg>
 <a class="skip" href="#content">Skip to content</a>
@@ -539,24 +586,31 @@ footer{background:var(--paper);border-top:1px solid var(--hairline);padding:var(
 </div>
 
 <!-- ============ RESOURCES ============ -->
-<!-- To link a real PDF, replace a card's "#contact/resource" with the file URL and change the link text. -->
+<!-- Resources are listed in the RESOURCES array in the script at the bottom. Add a PDF to /resources and a thumbnail to /resources/thumbs, then add a line there. -->
 <div id="p-resources" class="pg" data-title="Resources | The Everywhere Project">
 <section class="ih"><div class="wrap"><div class="panel has-img w-purple"><span class="shape"></span>
   <div class="ih-text">
   <div class="eyebrow">Resources</div>
   <h1>Evidence-based. Free to share.</h1>
-  <p class="lg">Harm reduction materials by TEP's co-founders: printable, shareable and grounded in current research.</p>
+  <p class="lg">Harm reduction guides made by our team. Free to read, download, print and share.</p>
 </div>
   <figure class="ih-img"><img src="images/test-strip.jpg" width="1400" height="933" alt="A xylazine test strip being explained at outreach" style="object-position:center"></figure>
 </div></div></section>
-<section class="band"><div class="wrap grid3">
-  <div class="card bordered rc"><span class="ico"><svg class="i"><use href="#i-pill"/></svg></span><div class="eyebrow">Overdose prevention</div><h3>Naloxone guide</h3><p>Step-by-step overdose reversal, when to use naloxone and what to do after. English and Spanish.</p><a class="link" href="#contact/resource">Request a copy <svg class="i"><use href="#i-arrow"/></svg></a></div>
-  <div class="card bordered rc"><span class="ico"><svg class="i"><use href="#i-file"/></svg></span><div class="eyebrow">Drug checking</div><h3>Fentanyl testing strips</h3><p>How to use strips, read results and understand the limits of drug checking.</p><a class="link" href="#contact/resource">Request a copy <svg class="i"><use href="#i-arrow"/></svg></a></div>
-  <div class="card bordered rc"><span class="ico"><svg class="i"><use href="#i-heart"/></svg></span><div class="eyebrow">Wound care</div><h3>Xylazine wound care</h3><p>Caring for xylazine-related skin wounds: cleaning, dressing and when to seek care.</p><a class="link" href="#contact/resource">Request a copy <svg class="i"><use href="#i-arrow"/></svg></a></div>
-  <div class="card bordered rc"><span class="ico"><svg class="i"><use href="#i-file"/></svg></span><div class="eyebrow">Education</div><h3>Safer snorting guide</h3><p>Lowering the risk of infection, nosebleeds and disease transmission when snorting.</p><a class="link" href="#contact/resource">Request a copy <svg class="i"><use href="#i-arrow"/></svg></a></div>
-  <div class="card bordered rc"><span class="ico"><svg class="i"><use href="#i-file"/></svg></span><div class="eyebrow">Education</div><h3>Xylazine (tranq) overview</h3><p>What xylazine is, how it interacts with opioids and why it matters for overdose response.</p><a class="link" href="#contact/resource">Request a copy <svg class="i"><use href="#i-arrow"/></svg></a></div>
-  <div class="card bordered rc"><span class="ico"><svg class="i"><use href="#i-people"/></svg></span><div class="eyebrow">Training</div><h3>Request a training</h3><p>Staff trainings on naloxone, harm reduction basics and overdose response for organizations and events.</p><a class="link" href="#contact/training">Get in touch <svg class="i"><use href="#i-arrow"/></svg></a></div>
+<section class="band"><div class="wrap">
+  <div class="chips" role="toolbar" aria-label="Filter resources" id="res-filter"></div>
+  <div class="grid3" id="res-grid"></div>
+  <div class="card bordered train"><span class="ico"><svg class="i"><use href="#i-people"/></svg></span><div><h3>Want a training?</h3><p>We lead trainings on naloxone, harm reduction basics and overdose response for organizations and events.</p></div><a class="btn" href="#contact/training">Get in touch</a></div>
 </div></section>
+<dialog id="viewer" aria-labelledby="v-title">
+  <div class="v-bar">
+    <div class="v-head"><div class="eyebrow" id="v-cat"></div><h2 id="v-title"></h2></div>
+    <div class="v-act">
+      <a class="btn" id="v-dl" href="#" download><svg class="i"><use href="#i-download"/></svg><span class="lbl">Download</span></a>
+      <button class="v-x" id="v-close" aria-label="Close"><svg class="i"><use href="#i-x"/></svg></button>
+    </div>
+  </div>
+  <div class="v-pages" id="v-pages"></div>
+</dialog>
 </div>
 
 <!-- ============ GET INVOLVED ============ -->
@@ -699,6 +753,108 @@ document.querySelectorAll('[data-events]').forEach(box => {
 });
 document.getElementById('yr').textContent = new Date().getFullYear();
 
+
+/* ---------- RESOURCES ---------- */
+const CATS = ['Overdose response','Drug checking','Tranq and new drugs','Safer use','Community and support'];
+const RESOURCES = [
+  {slug:'overdose-reversal-quick-guide', cat:0, title:'How to reverse an opioid overdose', desc:'A quick guide to responding with naloxone: how to check on someone, give naloxone and keep them breathing until help arrives.', pages:1, kb:132},
+  {slug:'rescue-breathing', cat:0, title:'Rescue breathing and overdose reversals', desc:'Why rescue breaths matter, especially with tranq in the supply, and how to give them: one breath every five seconds.', pages:3, kb:328},
+  {slug:'never-throw-away-naloxone', cat:0, title:'Never throw away naloxone', desc:'Research shows naloxone still works when it is expired, boiled, or frozen and thawed. Keep it and use it.', pages:1, kb:516},
+  {slug:'try-not-to-use-alone', cat:0, title:'Try not to use alone', desc:'If you can\'t avoid using alone, call the Never Use Alone hotline at (800) 484-3731 or download the Brave app.', pages:1, kb:996},
+  {slug:'fentanyl-test-strip-instructions', cat:1, title:'Fentanyl test strip instructions', desc:'How to test for fentanyl, read your results and understand what the strips can and can\'t tell you, with steps for pills, powders and crack.', pages:22, kb:900},
+  {slug:'do-i-need-to-test-my-drugs', cat:1, title:'Do I need to test my drugs?', desc:'A quick flowchart to help you decide when testing makes sense.', pages:1, kb:328},
+  {slug:'tranq-xylazine-field-guide', cat:2, title:'Tranq (xylazine): a field guide', desc:'Our full guide to tranq: what it is, where it\'s showing up, overdose prevention, withdrawal, wound care and when to seek medical help.', pages:23, kb:2928},
+  {slug:'tranq-wound-care-101', cat:2, title:'Wound care 101', desc:'General wound care tips our team and others have found helpful for tranq-related wounds.', pages:4, kb:828},
+  {slug:'medetomidine', cat:2, title:'Medetomidine: what it is and why it matters', desc:'A tranquilizer similar to xylazine, found in Philly\'s supply since April 2024. How it compares to tranq, and why withdrawal needs medical care.', pages:2, kb:464},
+  {slug:'nitazenes', cat:2, title:'What are nitazenes?', desc:'Very strong synthetic opioids, first confirmed in Philadelphia in 2022. Naloxone still works, but it may take more doses and longer rescue breathing.', pages:6, kb:976},
+  {slug:'overamping-part-1', cat:3, title:'Overamping, part 1: what it is', desc:'What overamping on stimulants like cocaine, crack or meth looks like, the signs to watch for and tips to prevent it.', pages:7, kb:1908},
+  {slug:'overamping-part-2', cat:3, title:'Overamping, part 2: causes and when to call for help', desc:'What can lead to overamping and how to know when it\'s time to get help.', pages:9, kb:1864},
+  {slug:'safer-snorting-tips', cat:3, title:'Safer snorting tips', desc:'The best tools, tips and aftercare to lower the risk of infection and nosebleeds.', pages:1, kb:180},
+  {slug:'supporting-a-loved-one', cat:4, title:'Supporting a loved one who uses drugs', desc:'Ways to show up for someone you love, during the holidays and any day of the year.', pages:7, kb:3200},
+  {slug:'this-is-harm-reduction', cat:4, title:'This is harm reduction', desc:'What harm reduction looks like, from safer use supplies and naloxone to food, health care and safe shelter.', pages:1, kb:188},
+  {slug:'no-drugs-in-halloween-candy', cat:4, title:'No one is putting drugs in Halloween candy', desc:'A myth worth busting every October. Drugs are expensive, and people still aren\'t giving them away to kids for free.', pages:1, kb:964}
+];
+const pdfUrl = r => 'resources/'+r.slug+'.pdf';
+const sizeTxt = kb => kb >= 1000 ? (kb/1024).toFixed(1)+' MB' : kb+' KB';
+const grid = document.getElementById('res-grid'), filter = document.getElementById('res-filter');
+let curCat = -1;
+function drawRes(){
+  grid.innerHTML = RESOURCES.map((r,i) => (curCat < 0 || r.cat === curCat) ?
+    '<article class="res"><button class="res-open" data-i="'+i+'" aria-label="View '+esc(r.title)+'"><span class="res-thumb"><img src="resources/thumbs/'+r.slug+'.jpg" alt="" loading="lazy"></span></button>'+
+    '<div class="res-body"><div class="eyebrow">'+esc(CATS[r.cat])+'</div><h3>'+esc(r.title)+'</h3><p>'+esc(r.desc)+'</p>'+
+    '<div class="res-meta">PDF · '+r.pages+(r.pages===1?' page':' pages')+' · '+sizeTxt(r.kb)+'</div>'+
+    '<div class="res-act"><button class="btn" data-i="'+i+'"><svg class="i"><use href="#i-eye"/></svg>View</button>'+
+    '<a class="btn ghost" href="'+pdfUrl(r)+'" download><svg class="i"><use href="#i-download"/></svg>Download</a></div></div></article>' : ''
+  ).join('');
+}
+filter.innerHTML = ['All'].concat(CATS).map((c,i) => '<button class="chip" data-c="'+(i-1)+'" aria-pressed="'+(i===0)+'">'+esc(c)+'</button>').join('');
+filter.addEventListener('click', e => {
+  const b = e.target.closest('.chip'); if (!b) return;
+  curCat = +b.dataset.c;
+  filter.querySelectorAll('.chip').forEach(x => x.setAttribute('aria-pressed', x === b));
+  drawRes();
+});
+grid.addEventListener('click', e => { const b = e.target.closest('[data-i]'); if (b) openViewer(RESOURCES[+b.dataset.i]); });
+drawRes();
+
+const viewer = document.getElementById('viewer'), vPages = document.getElementById('v-pages');
+let pdfLib = null, renderToken = 0;
+function loadPdfLib(){
+  if (pdfLib) return Promise.resolve(pdfLib);
+  return new Promise((ok, fail) => {
+    const sc = document.createElement('script');
+    sc.src = 'vendor/pdfjs/pdf.min.js';
+    sc.onload = () => { window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'vendor/pdfjs/pdf.worker.min.js'; pdfLib = window.pdfjsLib; ok(pdfLib); };
+    sc.onerror = fail;
+    document.head.appendChild(sc);
+  });
+}
+function status(html){ vPages.innerHTML = '<div class="v-status">'+html+'</div>'; }
+async function openViewer(r){
+  const token = ++renderToken, url = pdfUrl(r);
+  document.getElementById('v-title').textContent = r.title;
+  document.getElementById('v-cat').textContent = CATS[r.cat];
+  const dl = document.getElementById('v-dl'); dl.href = url; dl.setAttribute('download', r.slug+'.pdf');
+  status('Loading…');
+  if (!viewer.open) viewer.showModal();
+  document.documentElement.style.overflow = 'hidden';
+  try { history.replaceState(null, '', '#resources/'+r.slug); } catch(_) {}
+  try {
+    const lib = await loadPdfLib();
+    const doc = await lib.getDocument(url).promise;
+    if (token !== renderToken) return;
+    vPages.innerHTML = '';
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    for (let n = 1; n <= doc.numPages; n++){
+      const page = await doc.getPage(n);
+      if (token !== renderToken) return;
+      const base = page.getViewport({scale:1});
+      const fit = Math.min(vPages.clientWidth - 24, 900) / base.width;
+      const vp = page.getViewport({scale: fit * dpr});
+      const c = document.createElement('canvas');
+      c.width = Math.floor(vp.width); c.height = Math.floor(vp.height);
+      c.style.width = Math.floor(vp.width / dpr)+'px';
+      c.setAttribute('role','img'); c.setAttribute('aria-label', r.title+', page '+n+' of '+doc.numPages);
+      vPages.appendChild(c);
+      await page.render({canvasContext: c.getContext('2d'), viewport: vp}).promise;
+    }
+  } catch(err) {
+    if (token !== renderToken) return;
+    status('We couldn\'t show a preview here.<br><a class="btn" href="'+url+'" target="_blank" rel="noopener">Open the PDF</a>');
+  }
+}
+function closeViewer(){
+  renderToken++;
+  if (viewer.open) viewer.close();
+}
+viewer.addEventListener('close', () => {
+  document.documentElement.style.overflow = '';
+  vPages.innerHTML = '';
+  if (location.hash.startsWith('#resources/')) { try { history.replaceState(null, '', '#resources'); } catch(_) {} }
+});
+document.getElementById('v-close').addEventListener('click', closeViewer);
+viewer.addEventListener('click', e => { if (e.target === viewer) closeViewer(); });
+
 /* ---------- ROUTING: #services, #donate, #services/events, #contact/volunteer ... ---------- */
 const PAGES = ['home','services','about','resources','involved','donate','contact'];
 const links = document.getElementById('links'), burger = document.querySelector('.burger');
@@ -710,7 +866,12 @@ function route(){
   document.querySelectorAll('.links a').forEach(a => a.classList.toggle('on', a.dataset.pg === page));
   document.title = document.getElementById('p-'+page).dataset.title;
   closeMenu();
-  if (page === 'contact' && sub){
+  if (viewer.open && !(page === 'resources' && sub)) closeViewer();
+  if (page === 'resources' && sub){
+    const r = RESOURCES.find(x => x.slug === sub);
+    window.scrollTo(0,0);
+    if (r) openViewer(r);
+  } else if (page === 'contact' && sub){
     const sel = document.getElementById('cf-topic');
     if (sel.querySelector('option[value="'+sub+'"]')) sel.value = sub;
     window.scrollTo(0,0);
