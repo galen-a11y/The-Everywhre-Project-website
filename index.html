@@ -4,347 +4,340 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Everywhere Project | Harm Reduction in Philadelphia</title>
-<meta name="description" content="The Everywhere Project is a Philadelphia-based 501(c)(3) harm reduction nonprofit providing naloxone, food, clothing, fentanyl testing strips, and overdose prevention every single week.">
+<meta name="description" content="The Everywhere Project is a Philadelphia harm reduction nonprofit providing naloxone, food, clothing, fentanyl testing strips, and overdose prevention every single week.">
 <meta property="og:title" content="The Everywhere Project">
-<meta property="og:description" content="Showing up for Philadelphia, every single week. No barriers. No judgment. Harm reduction is love.">
-<meta name="theme-color" content="#8b5fbf">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%238b5fbf'/%3E%3Ctext x='16' y='21' font-family='Georgia,serif' font-style='italic' font-size='14' fill='white' text-anchor='middle'%3EEP%3C/text%3E%3C/svg%3E">
+<meta property="og:description" content="Harm Reduction is Love. Meeting people where they are, everyday.">
+<meta name="theme-color" content="#047a80">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='white' stroke='%23363635' stroke-width='2.5'/%3E%3Cpath d='M16 23l-6-5.8C8.2 15.5 8.2 12.6 10 11c1.6-1.4 4-1.1 6 1.2 2-2.3 4.4-2.6 6-1.2 1.8 1.6 1.8 4.5 0 6.2z' fill='%23363635'/%3E%3C/svg%3E">
+<script async src="https://widgets.givebutter.com/latest.umd.cjs?acct=FYYphp86genHuNnj&p=other"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<script async src="https://widgets.givebutter.com/latest.umd.cjs?acct=FYYphp86genHuNnj&p=other"></script>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
+/* TEP design system: white first, one wash per section, teal does the work, purple says hello once. */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --ink:#1a1714;
-  --ink-mid:#5c5650;
-  --ink-light:#8a847e;
-  --white:#ffffff;
-  --sand:#f0f0f8;
-  --sand-b:#e0e0f0;
-  --peach:#f5e8f8;
-  --peach-b:#e8d8f0;
-  --terra:#8b5fbf;
-  --terra-d:#7a4db0;
-  --teal:#2a5f7f;
-  --teal-mid:#4a7fa0;
-  --cyan:#4dd0e1;
-  --cyan-light:#b3f5fc;
-  --grad:linear-gradient(135deg,#8b5fbf 0%,#4a7fa0 100%);
-  --soft:linear-gradient(135deg,#f5e8f8 0%,#b3f5fc 100%);
-  --serif:'Lora',Georgia,serif;
-  --sans:'Inter',system-ui,sans-serif;
-  --nav:60px;
-  --pad:56px;
+  --surface:#ffffff; --paper:#faf8f6;
+  --ink:#1d1e21; --ink-muted:#55565c; --charcoal:#363635;
+  --hairline:#e4e1e8; --border-strong:#8a8890;
+  --teal-100:#d4edee; --teal-200:#a7d1d4; --teal-500:#069aa1; --teal-700:#047a80; --teal-800:#035e63;
+  --purple-100:#f4ecff; --purple-200:#ecdbff; --purple-500:#b45ad3; --purple-700:#8e3fb0;
+  --blush-100:#ffeae8; --blush-200:#fcd1cc; --peach-200:#f9c5b4;
+  --on-teal:#ffffff; --focus:#035e63;
+  --sans:Poppins,"Helvetica Neue",Arial,sans-serif;
+  --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:72px;--s9:120px;
+  --r-sm:6px;--r-md:16px;--r-lg:32px;--r-pill:999px;
+  --shadow:0 8px 24px rgba(29,30,33,.08);
+  --nav:76px;
 }
-html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--white);color:var(--ink);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
-a{color:inherit}
-img{max-width:100%;display:block}
-:focus-visible{outline:2px solid var(--terra);outline-offset:2px}
-.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:8px 14px;border-radius:5px;z-index:200}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav) + 16px)}
+body{font-family:var(--sans);font-size:16px;line-height:26px;color:var(--ink);background:var(--surface);-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:var(--teal-700)}
+a:hover{color:var(--teal-800)}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+svg.i{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.skip{position:absolute;left:-999px;top:8px;background:var(--teal-700);color:#fff;padding:8px 16px;border-radius:var(--r-pill);z-index:200}
 .skip:focus{left:8px}
-
-/* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav);background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--sand-b);display:flex;align-items:center;justify-content:space-between;padding:0 40px}
-.n-logo{display:flex;align-items:center;gap:9px;text-decoration:none}
-.n-icon{width:32px;height:32px;border-radius:6px;background:var(--terra);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:13px;color:#fff;font-style:italic;flex-shrink:0}
-.n-name{font-size:14px;font-weight:600;color:var(--ink)}
-.n-links{display:flex;align-items:center;gap:24px}
-.n-links a{font-size:13px;color:var(--ink-mid);transition:color .15s;text-decoration:none;position:relative}
-.n-links a:hover,.n-links a.on{color:var(--ink)}
-.n-links a.on:not(.n-cta)::after{content:'';position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--terra);border-radius:2px}
-.n-cta{background:var(--terra);color:#fff!important;padding:8px 18px;border-radius:6px;font-weight:500;margin-left:4px}
-.n-cta:hover{background:var(--terra-d)}
-.n-burger{display:none;width:40px;height:40px;border:none;background:none;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px}
-.n-burger span{display:block;width:20px;height:2px;background:var(--ink);border-radius:2px;transition:transform .2s,opacity .2s}
-.n-burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.n-burger[aria-expanded="true"] span:nth-child(2){opacity:0}
-.n-burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-
-/* PAGES */
-main{padding-top:var(--nav)}
-.pg{display:none}
-.pg.on{display:block;animation:fade .25s ease}
-@keyframes fade{from{opacity:0}to{opacity:1}}
+.wrap{max-width:1200px;margin:0 auto;padding:0 var(--s6)}
+.band{padding:var(--s9) 0}
+.paper{background:var(--paper)}
+.w-teal{background:var(--teal-100)}
+.w-blush{background:var(--blush-100)}
+.w-purple{background:var(--purple-100)}
 
 /* TYPE */
-.lbl{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--terra);margin-bottom:8px}
-.serif-xl{font-family:var(--serif);font-size:clamp(28px,4vw,48px);font-weight:400;line-height:1.1;color:var(--ink)}
-.serif-xl em,.serif-lg em{font-style:italic;color:var(--terra)}
-.serif-lg{font-family:var(--serif);font-size:clamp(24px,3vw,36px);font-weight:400;line-height:1.15;color:var(--ink)}
-.body-l{font-size:16px;color:var(--ink-mid);line-height:1.75}
-.body-m{font-size:14px;color:var(--ink-mid);line-height:1.7}
-.txt-link{display:inline-block;margin-top:18px;font-size:12px;font-weight:600;color:var(--terra);text-transform:uppercase;letter-spacing:.05em;text-decoration:none}
-.txt-link:hover{color:var(--terra-d)}
+.display{font-size:60px;line-height:64px;font-weight:800;letter-spacing:-.01em}
+.tracked{font-size:40px;line-height:48px;font-weight:700;letter-spacing:.35em;text-transform:uppercase}
+h1,.h1{font-size:48px;line-height:56px;font-weight:800;letter-spacing:-.01em;text-wrap:balance}
+h2,.h2{font-size:32px;line-height:40px;font-weight:700;text-wrap:balance}
+h3,.h3{font-size:24px;line-height:32px;font-weight:700}
+.eyebrow{font-size:13px;line-height:16px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--purple-700);margin-bottom:var(--s4)}
+.eyebrow.t{color:var(--teal-800)}
+.lg{font-size:18px;line-height:28px}
+.muted{color:var(--ink-muted)}
+.small{font-size:14px;line-height:22px;color:var(--ink-muted)}
+.sig{color:var(--purple-500)}
+p+p{margin-top:var(--s4)}
 
 /* BUTTONS */
-.btn{display:inline-block;padding:11px 24px;border-radius:6px;font-size:14px;font-weight:500;cursor:pointer;border:none;font-family:var(--sans);transition:all .15s;text-decoration:none;text-align:center}
-.bt{background:var(--terra);color:#fff}.bt:hover{background:var(--terra-d)}
-.bow{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5)}.bow:hover{background:rgba(255,255,255,.12)}
-.bo{background:transparent;color:var(--ink);border:1.5px solid var(--ink-light)}.bo:hover{border-color:var(--ink)}
-.rule{width:32px;height:2px;background:var(--terra);margin-bottom:14px}
+.btn{display:inline-flex;align-items:center;gap:var(--s2);font:600 16px/20px var(--sans);padding:var(--s3) var(--s5);border-radius:var(--r-pill);border:2px solid var(--teal-700);background:var(--teal-700);color:var(--on-teal);text-decoration:none;cursor:pointer;transition:background .15s,border-color .15s,color .15s;min-height:48px}
+.btn:hover{background:var(--teal-800);border-color:var(--teal-800);color:var(--on-teal)}
+.btn.ghost{background:transparent;color:var(--teal-700)}
+.btn.ghost:hover{background:var(--teal-700);color:var(--on-teal)}
+.btn svg.i{width:18px;height:18px}
+.link{display:inline-flex;align-items:center;gap:6px;font-weight:600;text-decoration:none}
+.link svg.i{width:18px;height:18px;transition:transform .15s}
+.link:hover svg.i{transform:translateX(3px)}
+
+/* NAV */
+.nav{position:fixed;inset:0 0 auto;z-index:100;height:var(--nav);background:rgba(255,255,255,.97);border-bottom:1px solid var(--hairline)}
+.nav .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:var(--s5)}
+.logo{display:flex;align-items:center;gap:var(--s3);text-decoration:none;color:var(--ink)}
+.logo svg{width:44px;height:44px;flex:none}
+.logo b{font-size:15px;line-height:18px;font-weight:700}
+.logo small{display:block;font-size:11px;line-height:14px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted)}
+.links{display:flex;align-items:center;gap:var(--s5)}
+.links a{color:var(--ink);text-decoration:none;font-size:15px;position:relative;padding:var(--s2) 0}
+.links a:hover{color:var(--teal-700)}
+.links a.on:not(.btn){color:var(--teal-700);font-weight:600}
+.links a.on:not(.btn)::after{content:'';position:absolute;left:0;right:0;bottom:0;height:2px;border-radius:2px;background:var(--teal-700)}
+.links .btn{padding:10px 22px;min-height:44px;color:var(--on-teal)}
+.burger{display:none;width:48px;height:48px;border:0;background:none;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;border-radius:var(--r-pill)}
+.burger span{width:22px;height:2px;border-radius:2px;background:var(--ink);transition:transform .2s,opacity .2s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+main{padding-top:var(--nav)}
+.pg{display:none}
+.pg.on{display:block;animation:fade .3s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 
 /* HERO */
-.hero{background:var(--grad);padding:64px 40px 64px var(--pad);display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;min-height:calc(86vh - var(--nav))}
-.h-eye{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:16px;display:flex;align-items:center;gap:8px}
-.h-eye span{width:14px;height:1px;background:rgba(255,255,255,.5)}
-.hero h1{font-family:var(--serif);font-size:clamp(32px,4.4vw,54px);color:#fff;line-height:1.08;font-weight:400;margin-bottom:18px}
-.hero h1 em{font-style:italic;color:var(--cyan-light)}
-.h-sub{font-size:16px;color:rgba(255,255,255,.85);line-height:1.7;margin-bottom:28px;max-width:420px}
-.h-btns{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-.h-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.15);border-radius:8px;overflow:hidden;margin-top:34px;max-width:480px}
-.h-stat{background:rgba(255,255,255,.06);padding:15px 17px}
-.h-sv{font-family:var(--serif);font-size:30px;color:var(--cyan-light);line-height:1;margin-bottom:4px}
-.h-sl{font-size:12px;color:rgba(255,255,255,.72);line-height:1.35}
-/* To add a photo: set background-image on .h-photo, e.g. style="background-image:url('outreach.jpg')" */
-.h-photo{border-radius:12px;background-color:rgba(255,255,255,.08);background-size:cover;background-position:center;position:relative;min-height:440px;overflow:hidden}
-.h-photo::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 25%,rgba(179,245,252,.28),transparent 55%),radial-gradient(circle at 80% 70%,rgba(139,95,191,.35),transparent 50%)}
-.h-mark{position:absolute;top:40%;left:50%;transform:translate(-50%,-50%);font-family:var(--serif);font-style:italic;font-size:110px;color:rgba(255,255,255,.12);line-height:1;user-select:none}
-.h-quote{position:absolute;bottom:16px;left:16px;right:16px;background:rgba(42,95,127,.92);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:14px 16px}
-.h-quote p{font-size:14px;color:rgba(255,255,255,.92);font-style:italic;line-height:1.5;font-family:var(--serif)}
-.h-quote cite{font-size:11px;color:rgba(255,255,255,.6);font-style:normal;display:block;margin-top:5px}
+.hero{padding:var(--s8) 0 var(--s9)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:var(--s7);align-items:center}
+.hero .tracked{margin:var(--s5) 0 var(--s5);color:var(--ink)}
+.hero .lg{color:var(--ink-muted);max-width:480px}
+.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s3);margin-top:var(--s6)}
+.art{position:relative;aspect-ratio:1/1.02;max-width:520px;width:100%;justify-self:end}
+.blob{position:absolute;border-radius:50%}
+.blob.a{width:78%;height:72%;right:-4%;top:2%;background:var(--blush-200);border-radius:58% 42% 55% 45%/50% 60% 40% 50%}
+.blob.b{width:40%;height:38%;left:-2%;bottom:0;background:var(--peach-200);border-radius:45% 55% 60% 40%/55% 45% 55% 45%}
+.blob.c{width:26%;aspect-ratio:1;right:2%;bottom:10%;border:10px solid var(--teal-200)}
+/* To use a real outreach photo: <div class="photo" style="background-image:url('outreach.jpg')"> and delete the svg inside it */
+.photo{position:absolute;left:12%;top:12%;width:70%;height:66%;border-radius:var(--r-md);background:var(--teal-200) center/cover;display:grid;place-items:center;overflow:hidden}
+.photo svg{width:46%;height:46%;stroke:#fff;stroke-width:1.2;fill:none;opacity:.9}
+.quote{position:absolute;left:0;bottom:8%;width:72%;background:var(--surface);border-radius:var(--r-md);box-shadow:var(--shadow);padding:var(--s5)}
+.quote .mark{font-size:56px;line-height:30px;font-weight:800;color:var(--purple-700);display:block;height:26px}
+.quote p{font-weight:600;font-size:16px;line-height:24px}
+.quote cite{display:block;margin-top:var(--s2);font-style:normal;font-size:14px;line-height:20px;color:var(--ink-muted)}
+.sticker{position:absolute;right:0;top:6%;background:var(--surface);border-radius:var(--r-pill);box-shadow:var(--shadow);padding:10px 18px;font-size:14px;line-height:18px;font-weight:600;display:flex;align-items:center;gap:var(--s2)}
+.sticker b{font-size:22px;color:var(--teal-800);font-weight:800}
 
-/* STRIP */
-.strip{background:linear-gradient(90deg,rgba(245,232,248,.9) 0%,rgba(179,245,252,.8) 100%);border-bottom:1px solid var(--peach-b);padding:30px var(--pad);display:grid;grid-template-columns:repeat(4,1fr)}
-.st-item{padding:0 18px;border-right:1px solid var(--peach-b)}
-.st-item:first-child{padding-left:0}
-.st-item:last-child{border:none}
-.st-n{font-family:var(--serif);font-size:30px;color:var(--terra);line-height:1;margin-bottom:4px}
-.st-t{font-size:13px;color:var(--ink-mid);line-height:1.4}
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s5)}
+.stat{border-left:2px solid var(--teal-200);padding-left:var(--s5)}
+.stat b{display:block;font-size:44px;line-height:48px;font-weight:800;color:var(--teal-800);letter-spacing:-.01em}
+.stat span{display:block;margin-top:var(--s2);color:var(--ink-muted)}
 
 /* INTRO */
-.intro{padding:76px var(--pad);display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:center}
+.intro{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s7);align-items:start}
+.intro .lg{color:var(--ink)}
+.intro strong{font-weight:600}
 
-/* SERVICES PREVIEW */
-.svcs{padding:64px var(--pad);background:linear-gradient(180deg,var(--sand) 0%,rgba(240,240,248,.5) 100%)}
-.svcs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}
-.sc{background:var(--white);border-radius:10px;padding:22px 22px 18px;border:1px solid var(--sand-b);text-decoration:none;display:block;transition:box-shadow .2s,transform .2s}
-.sc:hover{box-shadow:0 6px 20px rgba(139,95,191,.14);transform:translateY(-2px)}
-.sc-icon{font-size:22px;margin-bottom:10px}
-.sc h3{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:6px}
-.sc p{font-size:13px;color:var(--ink-mid);line-height:1.6}
-.sc-link{display:inline-block;margin-top:12px;font-size:11px;font-weight:600;color:var(--terra);text-transform:uppercase;letter-spacing:.05em}
-.sc-link::after{content:' \2192'}
+/* CARDS */
+.head{max-width:640px;margin-bottom:var(--s7)}
+.head p{margin-top:var(--s4)}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s5)}
+.card{background:var(--surface);border-radius:var(--r-md);padding:var(--s5);display:flex;flex-direction:column;gap:var(--s3);text-decoration:none;color:var(--ink);transition:transform .2s}
+a.card:hover{transform:translateY(-3px);color:var(--ink)}
+.card p{color:var(--ink-muted);flex:1}
+.ico{flex:none;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--teal-100);color:var(--teal-700)}
+.card .link{color:var(--teal-700)}
+.bordered{border:1px solid var(--hairline)}
 
 /* STORY */
-.story{padding:64px var(--pad);background:linear-gradient(90deg,#f5e8f8 0%,#d9f8fc 100%);border-top:1px solid var(--peach-b);border-bottom:1px solid var(--peach-b);display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.story-q{font-family:var(--serif);font-size:18px;color:var(--ink);line-height:1.55;font-style:italic;padding:14px 0 14px 18px;border-left:2px solid var(--terra);margin:18px 0}
-.tl{display:flex;flex-direction:column}
-.tl-row{display:grid;grid-template-columns:48px 1fr;gap:10px;padding-bottom:22px;position:relative}
-.tl-row:last-child{padding-bottom:0}
-.tl-row::before{content:'';position:absolute;left:3px;top:14px;bottom:-4px;width:1px;background:var(--peach-b)}
-.tl-row:last-child::before{display:none}
-.tl-dot{width:7px;height:7px;border-radius:50%;background:var(--terra);position:absolute;left:0;top:7px}
-.tl-yr{font-family:var(--serif);font-size:14px;color:var(--terra);padding-left:16px}
-.tl-h{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:2px}
-.tl-p{font-size:13px;color:var(--ink-mid);line-height:1.5}
+.story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s8);align-items:center}
+.pull{margin:var(--s5) 0;padding-left:var(--s5);border-left:3px solid var(--blush-200);font-size:18px;line-height:28px;font-weight:600}
+.tl{list-style:none;position:relative}
+.tl::before{content:'';position:absolute;left:7px;top:10px;bottom:10px;width:2px;background:var(--teal-100)}
+.tl li{position:relative;padding:0 0 var(--s6) var(--s7)}
+.tl li:last-child{padding-bottom:0}
+.tl li::before{content:'';position:absolute;left:0;top:6px;width:16px;height:16px;border-radius:50%;background:var(--surface);border:3px solid var(--teal-700)}
+.tl .yr{font-weight:700;color:var(--teal-800);font-size:14px;letter-spacing:.12em}
+.tl h3{font-size:18px;line-height:26px;font-weight:600}
+.tl p{color:var(--ink-muted)}
 
-/* VOLUNTEER + EVENTS */
-.vol{padding:64px var(--pad);display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-.v-opts,.gi-opts{display:flex;flex-direction:column;gap:8px;margin-top:18px}
-.v-opt{display:flex;gap:12px;align-items:flex-start;padding:13px 15px;border:1px solid var(--sand-b);border-radius:8px;text-decoration:none;transition:border-color .15s;background:var(--white)}
-a.v-opt:hover{border-color:var(--terra)}
-.v-icon{font-size:17px;flex-shrink:0;margin-top:1px}
-.v-opt h4{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:1px}
-.v-opt p{font-size:12px;color:var(--ink-mid)}
-.ev-lbl{font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--terra);margin-bottom:10px}
-.ev-list{display:flex;flex-direction:column;gap:8px}
-.ev-row{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:center;padding:11px 14px;border:1px solid var(--sand-b);border-radius:8px;background:var(--white)}
-.ev-d{text-align:center}
-.ev-day{font-family:var(--serif);font-size:20px;color:var(--terra);line-height:1}
-.ev-mo{font-size:10px;color:var(--ink-light);text-transform:uppercase;letter-spacing:.05em}
-.ev-t{font-size:14px;font-weight:500;color:var(--ink)}
-.ev-m{font-size:12px;color:var(--ink-light);margin-top:1px}
-.ev-badge{display:inline-block;font-size:10px;padding:1px 6px;border-radius:3px;font-weight:500;margin-left:5px;background:#f0ebfa;color:var(--terra);vertical-align:1px}
-.ev-badge.sp{background:#e0f7fa;color:var(--teal)}
+/* EVENTS: What, When, Where */
+.vol{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s7);align-items:start}
+.ev{display:grid;gap:var(--s3)}
+.evc{background:var(--surface);border-radius:var(--r-md);padding:var(--s4) var(--s5);display:grid;grid-template-columns:auto minmax(0,1fr);gap:var(--s4);align-items:center}
+.pill{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;background:var(--teal-700);color:var(--on-teal);border-radius:var(--r-pill);width:64px;height:64px;font-weight:600;font-size:12px;line-height:14px;letter-spacing:.08em;text-transform:uppercase}
+.pill b{font-size:22px;line-height:24px;font-weight:800;letter-spacing:0}
+.evc .what{font-weight:600}
+.evc .meta{font-size:14px;line-height:22px;color:var(--ink-muted);display:flex;flex-wrap:wrap;gap:2px var(--s4)}
+.evc .meta span{display:inline-flex;align-items:center;gap:var(--s1)}
+.evc .meta svg.i{width:15px;height:15px}
+.tag{display:inline-block;margin-left:var(--s2);padding:1px 10px;border-radius:var(--r-pill);background:var(--purple-100);color:var(--purple-700);font-size:12px;line-height:20px;font-weight:600;vertical-align:1px}
+.places{display:grid;gap:var(--s3);margin:var(--s6) 0}
+.place{display:flex;gap:var(--s3);align-items:flex-start}
+.place .ico{width:40px;height:40px;background:var(--surface)}
+.place .ico svg.i{width:18px;height:18px}
+.place b{display:block;font-weight:600}
 
-/* FOOTER */
-footer{background:var(--ink);padding:48px var(--pad) 26px}
-.f-grid{display:grid;grid-template-columns:2.5fr 1fr 1fr 1fr;gap:32px;margin-bottom:30px}
-.f-bn{font-family:var(--serif);font-size:18px;color:#fff;margin-bottom:8px}
-.f-tg{font-size:13px;color:rgba(255,255,255,.6);line-height:1.6;max-width:240px}
-.f-ein{font-size:12px;color:rgba(255,255,255,.45);margin-top:12px;line-height:1.7}
-.f-ein a{text-decoration:none}
-.f-ein a:hover{color:#fff}
-.f-col h4{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.45);margin-bottom:12px}
-.f-col a{display:block;font-size:13px;color:rgba(255,255,255,.7);margin-bottom:8px;text-decoration:none;transition:color .15s}
-.f-col a:hover{color:#fff}
-.f-bot{border-top:1px solid rgba(255,255,255,.1);padding-top:18px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-.f-copy{font-size:12px;color:rgba(255,255,255,.45)}
-.f-soc{display:flex;gap:8px;align-items:center}
-.soc{height:32px;padding:0 12px;border-radius:6px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:12px;color:rgba(255,255,255,.75);text-decoration:none;transition:background .15s}
-.soc:hover{background:rgba(255,255,255,.16);color:#fff}
-
-/* INNER HERO */
-.ih{background:var(--grad);padding:64px var(--pad) 56px}
-.ih-eye{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:10px}
-.ih h1{font-family:var(--serif);font-size:clamp(30px,3.8vw,46px);color:#fff;font-weight:400;line-height:1.1;max-width:560px;margin-bottom:14px}
-.ih h1 em{font-style:italic;color:var(--cyan-light)}
-.ih p{font-size:16px;color:rgba(255,255,255,.82);max-width:500px;line-height:1.65}
+/* INNER PAGE HEADER */
+.ih{padding:var(--s6) 0 0}
+.ih .panel{border-radius:var(--r-lg);padding:var(--s8) var(--s7);position:relative;overflow:hidden}
+.ih .panel>*{position:relative;max-width:680px}
+.ih h1{margin-bottom:var(--s4)}
+.ih .lg{color:var(--ink)}
+.ih .shape{position:absolute;right:-60px;top:-60px;width:300px;height:300px;border-radius:50%;max-width:none;opacity:.9}
+.w-teal .shape{background:var(--teal-200)}
+.w-blush .shape{background:var(--blush-200)}
+.w-purple .shape{background:var(--purple-200)}
+.ih .shape.s2{right:150px;top:auto;bottom:-110px;width:170px;height:170px;background:none;border:10px solid var(--surface);opacity:.7}
 
 /* SERVICES PAGE */
-.svc-body{padding:60px var(--pad)}
-.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px 64px}
-.sb{border-bottom:1px solid var(--sand-b);padding-bottom:36px;scroll-margin-top:calc(var(--nav) + 20px)}
-.svc-grid .sb:nth-last-child(-n+2){border-bottom:none;padding-bottom:0}
-.sb-icon{font-size:24px;margin-bottom:8px}
-.sb h3{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--ink);margin-bottom:8px}
-.sb p{font-size:14px;color:var(--ink-mid);line-height:1.7;margin-bottom:6px}
-.sb ul{padding-left:17px}
-.sb li{font-size:14px;color:var(--ink-mid);margin-bottom:4px;line-height:1.55}
-.sb .ct{font-size:14px;font-weight:500;color:var(--terra);margin-top:10px}
-.sb .meta{font-size:14px;color:var(--ink-mid);margin-top:10px;line-height:1.7}
-.sb .meta b{color:var(--ink);font-weight:500}
+.svc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s7) var(--s8)}
+.sb{scroll-margin-top:calc(var(--nav) + 24px);padding-top:var(--s5);border-top:1px solid var(--hairline)}
+.sb .ico{margin-bottom:var(--s4)}
+.sb h3{margin-bottom:var(--s2)}
+.sb>p{color:var(--ink-muted)}
+.sb ul{list-style:none;margin-top:var(--s3);display:grid;gap:6px}
+.sb li{padding-left:22px;position:relative}
+.sb li::before{content:'';position:absolute;left:2px;top:10px;width:8px;height:8px;border-radius:50%;background:var(--teal-500)}
+.sb li b{font-weight:600}
+.when{margin-top:var(--s4);background:var(--paper);border-radius:var(--r-md);padding:var(--s4) var(--s5);font-size:15px;line-height:24px}
+.when b{font-weight:600}
+.sb .btn{margin-top:var(--s5)}
 
 /* ABOUT */
-.ab-body{padding:60px var(--pad)}
-.ab-story{max-width:620px;margin:0 auto}
-.ab-story h2{font-family:var(--serif);font-size:28px;font-weight:400;color:var(--ink);margin-bottom:14px}
-.ab-story p{font-size:16px;color:var(--ink-mid);line-height:1.8;margin-bottom:14px}
-.ab-q{font-family:var(--serif);font-size:20px;color:var(--ink);font-style:italic;border-left:2px solid var(--terra);padding-left:16px;margin:24px 0;line-height:1.55}
-.mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:30px 0 0}
-.mv{background:var(--soft);border:1px solid var(--peach-b);border-radius:10px;padding:20px}
-.mv h3{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--terra);margin-bottom:7px}
-.mv p{font-size:14px!important;color:var(--ink-mid);line-height:1.7;margin:0!important}
-.team-sec{padding:60px var(--pad);background:var(--sand)}
-.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:26px}
-.tc{background:var(--white);border-radius:10px;padding:20px 14px;border:1px solid var(--sand-b);text-align:center}
-.tc-av{width:52px;height:52px;border-radius:50%;background:var(--grad);margin:0 auto 10px;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:16px;color:#fff;font-style:italic}
-.tc-n{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:2px}
-.tc-r{font-size:12px;color:var(--ink-mid)}
-.tc-c{font-size:11px;color:var(--terra);margin-top:3px;font-weight:500}
+.ab{max-width:720px}
+.ab h2{margin-bottom:var(--s4)}
+.ab p{color:var(--ink)}
+.ab .pull{border-color:var(--teal-200)}
+.mv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s4);margin-top:var(--s7)}
+.mv .card{background:var(--paper)}
+.team{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s5)}
+.tc{text-align:center}
+.av{width:96px;height:96px;margin:0 auto var(--s3);display:grid;place-items:center;font-size:24px;font-weight:700;color:var(--ink);border-radius:58% 42% 55% 45%/50% 60% 40% 50%}
+.tc:nth-child(4n+1) .av{background:var(--blush-200)}
+.tc:nth-child(4n+2) .av{background:var(--teal-200);border-radius:45% 55% 40% 60%/55% 45% 55% 45%}
+.tc:nth-child(4n+3) .av{background:var(--peach-200);border-radius:50% 50% 45% 55%/60% 40% 60% 40%}
+.tc:nth-child(4n+4) .av{background:var(--purple-200);border-radius:40% 60% 55% 45%/45% 55% 45% 55%}
+.tc b{display:block;font-weight:600}
+.tc span{display:block;font-size:14px;line-height:22px;color:var(--ink-muted)}
+.tc em{display:block;font-style:normal;font-size:12px;line-height:18px;font-weight:600;letter-spacing:.08em;color:var(--purple-700)}
 
 /* RESOURCES */
-.res-body{padding:60px var(--pad)}
-.res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.rc{background:var(--soft);border:1px solid var(--peach-b);border-radius:10px;padding:20px;display:flex;flex-direction:column}
-.rc-tag{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--terra);margin-bottom:6px}
-.rc h3{font-size:16px;font-weight:500;color:var(--ink);margin-bottom:6px;line-height:1.3}
-.rc p{font-size:13px;color:var(--ink-mid);line-height:1.6;flex:1}
-.rc-dl{display:inline-block;margin-top:12px;font-size:13px;font-weight:600;color:var(--terra);text-decoration:none}
-.rc-dl:hover{color:var(--terra-d);text-decoration:underline}
-
-/* GET INVOLVED */
-.point-wrap{padding:40px var(--pad) 60px;background:var(--white)}
-.point-wrap iframe{border:0;width:100%}
-.gi-body{padding:60px var(--pad);display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-.info-b{margin-top:12px;padding:14px 16px;background:var(--soft);border:1px solid var(--peach-b);border-radius:8px;font-size:14px;color:var(--ink-mid);line-height:1.6}
-.info-b b{color:var(--ink);font-weight:500;display:block;margin-bottom:2px}
-.info-b a{color:var(--terra)}
+.rc .eyebrow{margin-bottom:0}
 
 /* DONATE */
-.don{padding:60px var(--pad);background:var(--sand);display:grid;grid-template-columns:3fr 2fr;gap:52px;align-items:start}
-.gb-wrap{min-width:0}
-.gb-wrap givebutter-widget{display:block;width:100%}
-.g-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}
-.gc{background:var(--white);border:1.5px solid var(--sand-b);border-radius:8px;padding:15px 16px;cursor:pointer;transition:border-color .15s,background .15s;text-align:left;font-family:var(--sans)}
-.gc:hover{border-color:var(--terra)}
-.gc[aria-pressed="true"]{border-color:var(--terra);background:var(--soft);box-shadow:0 0 0 1px var(--terra)}
-.g-amt{font-family:var(--serif);font-size:24px;color:var(--ink);line-height:1}
-.g-what{font-size:12px;color:var(--ink-mid);margin-top:5px;line-height:1.4}
-.g-pop{font-size:10px;font-weight:600;color:var(--terra);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
-.monthly{padding:14px 16px;border-radius:8px;background:var(--white);border:1px solid var(--sand-b);font-size:14px;color:var(--ink-mid);line-height:1.6}
-.monthly b{color:var(--ink);display:block;margin-bottom:2px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
-.d-go{margin-top:18px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-.d-note{font-size:12px;color:var(--ink-light)}
-.d-aside{background:var(--grad);border-radius:12px;padding:26px;display:flex;flex-direction:column;gap:16px}
-.ai{display:flex;gap:12px}
-.a-icon{font-size:18px;flex-shrink:0;margin-top:2px}
-.ai h4{font-size:15px;font-weight:500;color:#fff;margin-bottom:2px}
-.ai p{font-size:13px;color:rgba(255,255,255,.78);line-height:1.55}
-.a-div{height:1px;background:rgba(255,255,255,.15)}
-.a-wish{font-size:13px;color:rgba(255,255,255,.75);text-align:center}
-.a-wish a{color:#fff;font-weight:500}
+.don{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:var(--s7);align-items:start}
+.gb{min-width:0}
+.gb givebutter-widget{display:block;width:100%}
+.aside{background:var(--paper);border-radius:var(--r-lg);padding:var(--s6);display:grid;gap:var(--s5)}
+.ai{display:flex;gap:var(--s4)}
+.ai b{display:block;font-weight:600}
+.ai p{font-size:15px;line-height:24px;color:var(--ink-muted)}
+.aside hr{border:0;border-top:1px solid var(--hairline)}
+
+/* GET INVOLVED */
+.point{padding:var(--s7) 0 var(--s9)}
+.point iframe{border:0;width:100%}
 
 /* CONTACT */
-.co-body{padding:60px var(--pad);display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-.f-stack{display:flex;flex-direction:column;gap:12px}
-.f-row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.fg{display:flex;flex-direction:column;gap:5px}
-.fg label{font-size:13px;font-weight:500;color:var(--ink)}
-.fg input,.fg textarea,.fg select{padding:11px 13px;border-radius:6px;border:1px solid var(--sand-b);font-family:var(--sans);font-size:15px;color:var(--ink);background:var(--white);transition:border-color .15s;-webkit-appearance:none;appearance:none;width:100%}
-.fg select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%235c5650' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center;padding-right:34px}
-.fg input:focus,.fg textarea:focus,.fg select:focus{outline:none;border-color:var(--terra);box-shadow:0 0 0 3px rgba(139,95,191,.15)}
-.fg textarea{min-height:120px;resize:vertical}
-.sbtn{background:var(--terra);color:#fff;padding:13px;border-radius:6px;font-size:15px;font-weight:500;border:none;cursor:pointer;font-family:var(--sans);transition:background .15s}
-.sbtn:hover{background:var(--terra-d)}
-.f-hint{font-size:12px;color:var(--ink-light)}
-.f-ok{display:none;padding:12px 14px;border-radius:7px;background:#e8f7ee;border:1px solid #bfe5cc;font-size:13px;color:#1f5f3a}
-.co-info{display:flex;flex-direction:column;gap:18px}
-.ci{display:flex;gap:12px}
-.ci-icon{font-size:17px;margin-top:2px}
-.ci h4{font-size:15px;font-weight:500;color:var(--ink);margin-bottom:2px}
-.ci p{font-size:14px;color:var(--ink-mid);line-height:1.55}
-.ci a{color:var(--terra);text-decoration:none}
-.ci a:hover{text-decoration:underline}
-.site-cards{display:flex;flex-direction:column;gap:8px;margin-top:5px}
-.site-c{background:var(--soft);border:1px solid var(--peach-b);border-radius:8px;padding:13px 15px;text-decoration:none;display:block}
-.site-c h4{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:2px}
-.site-c p{font-size:13px;color:var(--ink-mid)}
-.follow{background:var(--sand);border:1px solid var(--sand-b);border-radius:8px;padding:14px 16px}
-.follow p{font-size:14px;color:var(--ink-mid)}
-.follow a{color:var(--terra)}
+.co{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s8);align-items:start}
+form{display:grid;gap:var(--s4)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3)}
+.fg{display:grid;gap:6px}
+.fg label{font-weight:600;font-size:15px}
+.fg input,.fg textarea,.fg select{font:16px/24px var(--sans);color:var(--ink);background:var(--surface);border:1px solid var(--border-strong);border-radius:var(--r-sm);padding:11px 14px;width:100%;-webkit-appearance:none;appearance:none}
+.fg select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231d1e21' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px}
+.fg textarea{min-height:140px;resize:vertical}
+.fg input:focus,.fg textarea:focus,.fg select:focus{outline:2px solid var(--focus);outline-offset:2px;border-color:var(--teal-800)}
+.fg .bad{border-color:#b3261e}
+form .btn{justify-content:center;width:100%}
+.ok{display:none;background:var(--teal-100);border-radius:var(--r-md);padding:var(--s4);font-size:15px;line-height:24px;color:var(--ink)}
+.info{display:grid;gap:var(--s5)}
+
+/* FOOTER */
+footer{background:var(--paper);border-top:1px solid var(--hairline);padding:var(--s8) 0 var(--s6)}
+.fg4{display:grid;grid-template-columns:minmax(0,2fr) repeat(3,minmax(0,1fr));gap:var(--s6)}
+.fbrand .logo{margin-bottom:var(--s4)}
+.fbrand .lg{font-weight:700}
+.fcol h4{font-size:13px;line-height:16px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:var(--s4)}
+.fcol a{display:block;color:var(--ink);text-decoration:none;padding:4px 0}
+.fcol a:hover{color:var(--teal-700)}
+.fbot{margin-top:var(--s7);padding-top:var(--s5);border-top:1px solid var(--hairline);display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--s3);align-items:center}
+.soc{display:flex;gap:var(--s2)}
+.soc a{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--surface);border:1px solid var(--hairline);color:var(--teal-700)}
+.soc a:hover{border-color:var(--teal-700)}
 
 /* RESPONSIVE */
-@media (max-width:960px){
-  :root{--pad:32px}
-  .nav{padding:0 20px}
-  .n-burger{display:flex}
-  .n-links{position:fixed;top:var(--nav);left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:8px 20px 20px;border-bottom:1px solid var(--sand-b);box-shadow:0 12px 24px rgba(0,0,0,.08);transform:translateY(-8px);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
-  .n-links.open{transform:none;opacity:1;pointer-events:auto}
-  .n-links a{font-size:16px;padding:13px 4px;border-bottom:1px solid var(--sand)}
-  .n-links a.on:not(.n-cta)::after{display:none}
-  .n-links a.on{color:var(--terra)}
-  .n-cta{margin:12px 0 0;text-align:center;border-bottom:none!important}
-  .hero{grid-template-columns:1fr;padding:48px var(--pad);min-height:0}
-  .h-photo{min-height:300px}
-  .intro,.story,.vol,.gi-body,.don,.co-body{grid-template-columns:1fr;gap:36px}
-  .svcs-grid,.res-grid{grid-template-columns:1fr 1fr}
-  .team-grid{grid-template-columns:repeat(3,1fr)}
-  .strip{grid-template-columns:1fr 1fr;gap:20px 0}
-  .st-item:nth-child(2){border:none}
-  .st-item:nth-child(3){padding-left:0}
-  .f-grid{grid-template-columns:1fr 1fr 1fr}
-  .f-grid>div:first-child{grid-column:1/-1}
+@media (max-width:1000px){
+  .burger{display:flex}
+  .links{position:fixed;top:var(--nav);left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--surface);padding:var(--s2) var(--s4) var(--s5);border-bottom:1px solid var(--hairline);box-shadow:var(--shadow);opacity:0;pointer-events:none;transform:translateY(-8px);transition:opacity .2s,transform .2s}
+  .links.open{opacity:1;pointer-events:auto;transform:none}
+  .links a{font-size:17px;padding:14px 4px;border-bottom:1px solid var(--hairline)}
+  .links a.on:not(.btn)::after{display:none}
+  .links .btn{margin-top:var(--s4);justify-content:center;border-bottom:2px solid var(--teal-700)}
+  .hero .wrap,.intro,.story,.vol,.don,.co{grid-template-columns:minmax(0,1fr)}
+  .art{justify-self:center;max-width:440px}
+  .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:var(--s6)}
+  .team{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .fg4{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .fbrand{grid-column:1/-1}
 }
-@media (max-width:620px){
-  :root{--pad:20px}
-  body{font-size:15px}
-  .n-name{font-size:13px}
-  .hero{padding:40px var(--pad) 36px}
-  .h-btns .btn{flex:1}
-  .h-photo{min-height:240px}
-  .h-mark{font-size:80px}
-  .intro,.svcs,.story,.vol,.svc-body,.ab-body,.team-sec,.res-body,.gi-body,.don,.co-body{padding-top:44px;padding-bottom:44px}
-  .ih{padding:44px var(--pad) 40px}
-  .svcs-grid,.res-grid,.svc-grid,.mv-grid,.f-row2{grid-template-columns:1fr}
-  .svc-grid .sb:nth-last-child(2){border-bottom:1px solid var(--sand-b);padding-bottom:36px}
-  .team-grid{grid-template-columns:1fr 1fr}
-  .st-n{font-size:26px}
-  .f-grid{grid-template-columns:1fr 1fr}
-  .f-grid>div:last-child{grid-column:1/-1}
-  .d-go .btn{width:100%}
+@media (max-width:640px){
+  :root{--nav:68px}
+  .wrap{padding:0 var(--s4)}
+  .band{padding:var(--s8) 0}
+  .hero{padding:var(--s6) 0 var(--s8)}
+  .display{font-size:40px;line-height:44px}
+  .tracked{font-size:24px;line-height:32px;letter-spacing:.3em}
+  h1,.h1{font-size:34px;line-height:40px}
+  h2,.h2{font-size:26px;line-height:34px}
+  h3,.h3{font-size:21px;line-height:28px}
+  .logo small{display:none}
+  .logo svg{width:40px;height:40px}
+  .cta-row>*{flex:1 1 auto}
+  .cta-row .btn{justify-content:center}
+  .grid3,.svc,.mv,.row2{grid-template-columns:minmax(0,1fr)}
+  .team{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stat b{font-size:34px;line-height:40px}
+  .ih{padding-top:var(--s4)}
+  .ih .panel{padding:var(--s7) var(--s5);border-radius:var(--r-md)}
+  .ih .shape{width:200px;height:200px;right:-70px;top:-70px}
+  .ih .shape.s2{display:none}
+  .quote{width:84%}
+  .sticker{font-size:13px}
+  .fg4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .point{padding:var(--s5) 0 var(--s8)}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
+<!-- Line icons (Lucide style: 2px stroke, rounded ends) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+  <symbol id="i-meal" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></symbol>
+  <symbol id="i-van" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+  <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+  <symbol id="i-temp" viewBox="0 0 24 24"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M8 13h8"/><path d="M8 17h5"/></symbol>
+  <symbol id="i-pill" viewBox="0 0 24 24"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></symbol>
+  <symbol id="i-shirt" viewBox="0 0 24 24"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></symbol>
+  <symbol id="i-mark" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#fff" stroke="#363635" stroke-width="3"/><circle cx="24" cy="24" r="15" fill="none" stroke="#363635" stroke-width="1.2" stroke-dasharray="2 3"/><path d="M24 33.5l-8.2-7.9c-2.4-2.3-2.4-6.2 0-8.3 2.2-1.9 5.4-1.5 8.2 1.6 2.8-3.1 6-3.5 8.2-1.6 2.4 2.1 2.4 6 0 8.3z" fill="#363635"/></symbol>
+</svg>
 <a class="skip" href="#content">Skip to content</a>
 
 <nav class="nav" aria-label="Main">
-  <a class="n-logo" href="#home" aria-label="The Everywhere Project home">
-    <div class="n-icon" aria-hidden="true">EP</div>
-    <span class="n-name">The Everywhere Project</span>
-  </a>
-  <button class="n-burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
-  <div class="n-links" id="nav-links">
-    <a href="#services" data-pg="services">Services</a>
-    <a href="#about" data-pg="about">About</a>
-    <a href="#resources" data-pg="resources">Resources</a>
-    <a href="#involved" data-pg="involved">Get Involved</a>
-    <a href="#contact" data-pg="contact">Contact</a>
-    <a class="n-cta" href="#donate" data-pg="donate">Donate</a>
+  <div class="wrap">
+    <a class="logo" href="#home" aria-label="The Everywhere Project home">
+      <svg aria-hidden="true"><use href="#i-mark"/></svg>
+      <span><b>The Everywhere Project</b><small>Harm Reduction is Love</small></span>
+    </a>
+    <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="links"><span></span><span></span><span></span></button>
+    <div class="links" id="links">
+      <a href="#services" data-pg="services">Services</a>
+      <a href="#about" data-pg="about">About</a>
+      <a href="#resources" data-pg="resources">Resources</a>
+      <a href="#involved" data-pg="involved">Get involved</a>
+      <a href="#contact" data-pg="contact">Contact</a>
+      <a class="btn" href="#donate" data-pg="donate"><svg class="i"><use href="#i-heart"/></svg>Donate</a>
+    </div>
   </div>
 </nav>
 
@@ -354,196 +347,225 @@ footer{background:var(--ink);padding:48px var(--pad) 26px}
 <div id="p-home" class="pg on" data-title="The Everywhere Project | Harm Reduction in Philadelphia">
 
 <section class="hero">
-  <div>
-    <div class="h-eye"><span></span>Philadelphia · Harm Reduction · Since 2021</div>
-    <h1>Showing up for Philadelphia,<br><em>every single week.</em></h1>
-    <p class="h-sub">Naloxone, food, clothing, fentanyl testing strips, and overdose prevention, wherever the community needs us.</p>
-    <div class="h-btns">
-      <givebutter-widget id="njDKop"></givebutter-widget>
-      <a class="btn bow" href="#involved">Volunteer With Us</a>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Philadelphia harm reduction · Since 2021</div>
+      <h1 class="display">Showing up for Philadelphia, every single <span class="sig">week.</span></h1>
+      <div class="tracked" aria-hidden="true">Everywhere</div>
+      <p class="lg">Naloxone, food, clothing, fentanyl testing strips and overdose prevention, wherever our neighbors need us. No barriers. No judgment.</p>
+      <div class="cta-row">
+        <givebutter-widget id="njDKop"></givebutter-widget>
+        <a class="btn ghost" href="#involved">Volunteer</a>
+      </div>
     </div>
-    <div class="h-stats">
-      <div class="h-stat"><div class="h-sv">5M+</div><div class="h-sl">Meals distributed since 2021</div></div>
-      <div class="h-stat"><div class="h-sv">300+</div><div class="h-sl">Neighbors served every week</div></div>
-      <div class="h-stat"><div class="h-sv">#2</div><div class="h-sl">Safer-use supplier in Philadelphia</div></div>
-      <div class="h-stat"><div class="h-sv">0</div><div class="h-sl">Outreach events ever missed</div></div>
-    </div>
-  </div>
-  <!-- To use a real outreach photo, add: style="background-image:url('your-photo.jpg')" -->
-  <div class="h-photo" role="img" aria-label="Community outreach">
-    <div class="h-mark" aria-hidden="true">EP</div>
-    <div class="h-quote">
-      <p>"Seeing you out here every week makes it easier for me to be out here."</p>
-      <cite>Resident, The Parkway, Summer 2021</cite>
+    <div class="art" aria-hidden="true">
+      <div class="blob a"></div>
+      <div class="blob b"></div>
+      <div class="blob c"></div>
+      <div class="photo"><svg viewBox="0 0 24 24"><use href="#i-heart"/></svg></div>
+      <div class="sticker"><b>0</b> outreach nights missed</div>
+      <div class="quote">
+        <span class="mark">&ldquo;</span>
+        <p>Seeing you out here every week makes it easier for me to be out here.</p>
+        <cite>Neighbor, The Parkway, summer 2021</cite>
+      </div>
     </div>
   </div>
 </section>
 
-<div class="strip">
-  <div class="st-item"><div class="st-n">1,000+</div><div class="st-t">Individuals served each week</div></div>
-  <div class="st-item"><div class="st-n">175</div><div class="st-t">Thanksgiving boxes in 2025</div></div>
-  <div class="st-item"><div class="st-n">1,600 lbs</div><div class="st-t">Food to Conwell Middle during SNAP cuts</div></div>
-  <div class="st-item"><div class="st-n">1,000</div><div class="st-t">Toys for children every holiday season</div></div>
-</div>
-
-<section class="intro">
-  <div>
-    <div class="rule"></div>
-    <h2 class="serif-xl">We don't wait for people to come to us.<br><em>We go to them.</em></h2>
-  </div>
-  <div>
-    <p class="body-l">TEP is a Philadelphia-based 501(c)(3) harm reduction nonprofit. We expand access to naloxone, fentanyl testing strips, safer use supplies, food, clothing, and overdose prevention education, at music festivals, community events, and on the streets every single week.</p>
-    <p class="body-l" style="margin-top:12px">No barriers. No judgment. Harm reduction is love.</p>
-    <a class="txt-link" href="#about">Our story &rarr;</a>
+<section class="band paper" style="padding:var(--s8) 0">
+  <div class="wrap stats">
+    <div class="stat"><b>5M+</b><span>Meals shared since 2021</span></div>
+    <div class="stat"><b>1,000+</b><span>Neighbors served every week</span></div>
+    <div class="stat"><b>#2</b><span>Safer-use supplier in Philadelphia</span></div>
+    <div class="stat"><b>175</b><span>Thanksgiving boxes in 2025</span></div>
   </div>
 </section>
 
-<section class="svcs">
-  <div class="lbl">What we do</div>
-  <h2 class="serif-lg">Showing up everywhere it matters</h2>
-  <div class="svcs-grid">
-    <a class="sc" href="#services/meals"><div class="sc-icon">🍲</div><h3>Community Meal Sites</h3><p>Every Wed at LOVE Park, every Sat in Kensington. 1,000+ people weekly, not once missed since 2021.</p><span class="sc-link">Learn more</span></a>
-    <a class="sc" href="#services/mobile"><div class="sc-icon">🚐</div><h3>Mobile Outreach</h3><p>Out 6–7 days a week across Philadelphia and surrounding counties with food, supplies, and treatment referrals.</p><span class="sc-link">Learn more</span></a>
-    <a class="sc" href="#services/events"><div class="sc-icon">🎵</div><h3>Event Support</h3><p>Festivals, raves, concerts: naloxone, testing strips, and harm reduction education for your venue.</p><span class="sc-link">Learn more</span></a>
-    <a class="sc" href="#services/weather"><div class="sc-icon">🌡️</div><h3>Extreme Weather Response</h3><p>Code Blue, Code Red, cooling and warming stations, emergency supplies, and transportation to shelter.</p><span class="sc-link">Learn more</span></a>
-    <a class="sc" href="#services/holiday"><div class="sc-icon">🎁</div><h3>Holiday Events</h3><p>Two Thanksgiving feasts, 175+ family boxes, and 1,000 toys for children every season.</p><span class="sc-link">Learn more</span></a>
-    <a class="sc" href="#services/specialized"><div class="sc-icon">🤝</div><h3>Specialized Support</h3><p>People in treatment, newly housed, or hospitalized, school pantry restocking, children's clothing drives.</p><span class="sc-link">Learn more</span></a>
-  </div>
-</section>
-
-<section class="story">
-  <div>
-    <div class="lbl">How it started</div>
-    <h2 class="serif-lg">A subway station.<br>December 2020.</h2>
-    <blockquote class="story-q">"Shannon had shown up unprepared. Jen loaded her up from her car without a second thought."</blockquote>
-    <p class="body-m">Every other organization had gone inside. Overdoses were at a record high. Two strangers kept showing up, and never stopped.</p>
-    <a class="btn bo" style="margin-top:22px" href="#about">Read the full story</a>
-  </div>
-  <div class="tl">
-    <div class="tl-row"><div class="tl-dot"></div><div class="tl-yr">2020</div><div><div class="tl-h">First outreach</div><div class="tl-p">Two strangers distribute food and naloxone when no one else would.</div></div></div>
-    <div class="tl-row"><div class="tl-dot"></div><div class="tl-yr">2021</div><div><div class="tl-h">501(c)(3) incorporated</div><div class="tl-p">First week at LOVE Park: 30 people served.</div></div></div>
-    <div class="tl-row"><div class="tl-dot"></div><div class="tl-yr">2023</div><div><div class="tl-h">#2 safer-use supplier in Philadelphia</div><div class="tl-p">300+ served weekly. 5 million meals cumulatively.</div></div></div>
-    <div class="tl-row"><div class="tl-dot"></div><div class="tl-yr">2025</div><div><div class="tl-h">SNAP response</div><div class="tl-p">175 Thanksgiving boxes + 1,600 lbs food to Conwell Middle School.</div></div></div>
-  </div>
-</section>
-
-<section class="vol">
-  <div>
-    <div class="lbl">Get involved</div>
-    <h2 class="serif-lg">Come out<br><em>with us.</em></h2>
-    <p class="body-m" style="margin-top:12px">No experience required. Show up, move fast, take care of your neighbors.</p>
-    <div class="v-opts">
-      <a class="v-opt" href="#involved"><div class="v-icon">🌆</div><div><h4>LOVE Park, Wednesdays</h4><p>Volunteers arrive 6:45 PM · 15th &amp; JFK Blvd, Center City</p></div></a>
-      <a class="v-opt" href="#involved"><div class="v-icon">🏘️</div><div><h4>Kensington, Saturdays</h4><p>Volunteers arrive 12:30 PM · Ruth &amp; Clearfield St.</p></div></a>
-      <a class="v-opt" href="#involved"><div class="v-icon">🧰</div><div><h4>Kit Making, Thursdays</h4><p>6:00 PM · Contact Sherm for location</p></div></a>
+<section class="band">
+  <div class="wrap intro">
+    <div>
+      <div class="eyebrow">Who we are</div>
+      <h2>We don't wait for people to come to us. We go to them.</h2>
     </div>
-    <a class="btn bt" style="margin-top:18px" href="#involved">See all events</a>
+    <div>
+      <p class="lg">The Everywhere Project is a Philadelphia 501(c)(3) harm reduction nonprofit. We expand access to naloxone, fentanyl testing strips, safer use supplies, food, clothing and overdose prevention education, at music festivals, community events and on the street every single week.</p>
+      <p class="lg"><strong>Overdoses are preventable.</strong> Harm reduction is love.</p>
+      <a class="link" href="#about" style="margin-top:var(--s5)">Our story <svg class="i"><use href="#i-arrow"/></svg></a>
+    </div>
   </div>
-  <div>
-    <div class="ev-lbl">Upcoming events</div>
-    <div class="ev-list" data-events="4"></div>
+</section>
+
+<section class="band w-teal">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow t">What we do</div>
+      <h2>Meeting people where they are</h2>
+    </div>
+    <div class="grid3">
+      <a class="card" href="#services/meals"><span class="ico"><svg class="i"><use href="#i-meal"/></svg></span><h3>Community meals</h3><p>Every Wednesday at LOVE Park and every Saturday in Kensington. 1,000+ neighbors a week, never missed since 2021.</p><span class="link">Learn more <svg class="i"><use href="#i-arrow"/></svg></span></a>
+      <a class="card" href="#services/mobile"><span class="ico"><svg class="i"><use href="#i-van"/></svg></span><h3>Mobile outreach</h3><p>Out 6 to 7 days a week across Philadelphia and nearby counties with food, supplies and treatment referrals.</p><span class="link">Learn more <svg class="i"><use href="#i-arrow"/></svg></span></a>
+      <a class="card" href="#services/events"><span class="ico"><svg class="i"><use href="#i-music"/></svg></span><h3>Event support</h3><p>Festivals, raves and concerts: naloxone, testing strips and harm reduction education for your venue.</p><span class="link">Learn more <svg class="i"><use href="#i-arrow"/></svg></span></a>
+      <a class="card" href="#services/weather"><span class="ico"><svg class="i"><use href="#i-temp"/></svg></span><h3>Extreme weather</h3><p>Code Blue and Code Red response: cooling and warming supplies, emergency care and rides to shelter.</p><span class="link">Learn more <svg class="i"><use href="#i-arrow"/></svg></span></a>
+      <a class="card" href="#services/holiday"><span class="ico"><svg class="i"><use href="#i-gift"/></svg></span><h3>Holiday events</h3><p>Two Thanksgiving feasts, 175+ family boxes and about 1,000 toys for kids every season.</p><span class="link">Learn more <svg class="i"><use href="#i-arrow"/></svg></span></a>
+      <a class="card" href="#services/specialized"><span class="ico"><svg class="i"><use href="#i-people"/></svg></span><h3>Specialized support</h3><p>For neighbors in treatment, newly housed or in the hospital, plus school pantries and clothing drives.</p><span class="link">Learn more <svg class="i"><use href="#i-arrow"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap story">
+    <div>
+      <div class="eyebrow">How it started</div>
+      <h2>A subway station. December 2020.</h2>
+      <blockquote class="pull">Shannon had shown up unprepared. Jen loaded her up from her car without a second thought.</blockquote>
+      <p class="muted">Every other organization had gone inside. Overdoses were at a record high. Two strangers kept showing up, and never stopped.</p>
+      <a class="btn ghost" href="#about" style="margin-top:var(--s6)">Read the full story</a>
+    </div>
+    <ol class="tl">
+      <li><div class="yr">2020</div><h3>First outreach</h3><p>Two strangers share food and naloxone when no one else would.</p></li>
+      <li><div class="yr">2021</div><h3>501(c)(3) incorporated</h3><p>First week at LOVE Park: 30 people served.</p></li>
+      <li><div class="yr">2023</div><h3>#2 safer-use supplier in Philadelphia</h3><p>300+ served weekly. 5 million meals shared.</p></li>
+      <li><div class="yr">2025</div><h3>SNAP response</h3><p>175 Thanksgiving boxes and 1,600 lbs of food to Conwell Middle School.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band w-blush">
+  <div class="wrap vol">
+    <div>
+      <div class="eyebrow">Get involved</div>
+      <h2>Come out with us.</h2>
+      <p class="lg" style="margin-top:var(--s4)">No experience needed. Show up, move fast, take care of your neighbors.</p>
+      <div class="places">
+        <div class="place"><span class="ico"><svg class="i"><use href="#i-pin"/></svg></span><div><b>LOVE Park, Wednesdays</b><span class="small">15th &amp; JFK Blvd, Center City</span></div></div>
+        <div class="place"><span class="ico"><svg class="i"><use href="#i-pin"/></svg></span><div><b>Kensington, Saturdays</b><span class="small">Ruth &amp; Clearfield St.</span></div></div>
+        <div class="place"><span class="ico"><svg class="i"><use href="#i-box"/></svg></span><div><b>Kit making, Thursdays</b><span class="small">Contact Sherm for location</span></div></div>
+      </div>
+      <a class="btn" href="#involved">See all events</a>
+    </div>
+    <div>
+      <div class="eyebrow t">Coming up</div>
+      <div class="ev" data-events="4"></div>
+    </div>
   </div>
 </section>
 </div>
 
 <!-- ============ SERVICES ============ -->
 <div id="p-services" class="pg" data-title="Services | The Everywhere Project">
-<div class="ih"><div class="ih-eye">Services</div><h1>Low barrier. Judgment free.<br><em>Always showing up.</em></h1><p>Meet people where they are, on their terms, without conditions.</p></div>
-<div class="svc-body">
-  <div class="svc-grid">
-    <div class="sb" id="meals"><div class="sb-icon">🍲</div><h3>Community Meal Sites</h3><p>Two weekly sites, never missed since 2021.</p><ul><li>Hot food and to-go meals</li><li>Weather-appropriate clothing</li><li>Harm reduction support and education</li><li>Wound care (Saturdays)</li><li>Treatment referrals and social services</li><li>Hygiene and menstrual supplies</li></ul><p class="meta"><b>Wed 7–9 PM</b> · LOVE Park, 15th &amp; JFK Blvd<br><b>Sat 1–4 PM</b> · Ruth &amp; Clearfield, Kensington</p></div>
-    <div class="sb" id="mobile"><div class="sb-icon">🚐</div><h3>Mobile Outreach</h3><p>Out 6–7 days a week across Philadelphia and surrounding counties.</p><ul><li>Food and supply distribution</li><li>Emergency food within 24 hrs of a call</li><li>Treatment referrals</li><li>Connection to social services</li></ul></div>
-    <div class="sb" id="events"><div class="sb-icon">🎵</div><h3>Harm Reduction Event Support</h3><p>Customized for your event: festivals, raves, concerts, community gatherings.</p><ul><li>Naloxone and fentanyl testing strips</li><li>Safer use materials and tabling</li><li>Staff trainings and educational materials</li><li>First aid and on-site response</li></ul><p class="ct">Interested in TEP at your next event?</p><a class="btn bt" style="margin-top:10px;font-size:13px;padding:9px 18px" href="#contact/event">Request event support</a></div>
-    <div class="sb" id="weather"><div class="sb-icon">🌡️</div><h3>Extreme Weather Response</h3><ul><li><b>Heat:</b> Cold drinks, cooling towels, electrolytes, transportation</li><li><b>Cold:</b> Hot drinks, blankets, mylar, warm clothing, transportation</li><li>On-site emergency medical response</li></ul></div>
-    <div class="sb" id="holiday"><div class="sb-icon">🎁</div><h3>Holiday Events</h3><ul><li>Two Thanksgiving feasts (one per site)</li><li>175+ Thanksgiving family boxes in 2025</li><li>Annual toy giveaway: about 1,000 toys for children</li></ul></div>
-    <div class="sb" id="specialized"><div class="sb-icon">🤝</div><h3>Specialized Support</h3><p>Meeting people wherever life has taken them.</p><ul><li>Support for people in treatment, newly housed, or hospitalized</li><li>40+ water shoes for Kensington youth (2023)</li><li>800 outfits for low-income housing programs (2024)</li><li>1,600 lbs food to Conwell Middle during SNAP cuts (2025)</li></ul></div>
-  </div>
-</div>
+<section class="ih"><div class="wrap"><div class="panel w-teal"><span class="shape"></span><span class="shape s2"></span>
+  <div class="eyebrow t">Services</div>
+  <h1>Low barrier. Judgment free. Always showing up.</h1>
+  <p class="lg">We meet people where they are, on their terms, without conditions.</p>
+</div></div></section>
+<section class="band"><div class="wrap svc">
+  <div class="sb" id="meals"><span class="ico"><svg class="i"><use href="#i-meal"/></svg></span><h3>Community meals</h3><p>Two weekly sites, never missed since 2021.</p><ul><li>Hot food and to-go meals</li><li>Weather-appropriate clothing</li><li>Harm reduction support and education</li><li>Wound care (Saturdays)</li><li>Treatment referrals and social services</li><li>Hygiene and menstrual supplies</li></ul><div class="when"><b>Wednesdays, 7 to 9 PM</b> · LOVE Park, 15th &amp; JFK Blvd<br><b>Saturdays, 1 to 4 PM</b> · Ruth &amp; Clearfield, Kensington</div></div>
+  <div class="sb" id="mobile"><span class="ico"><svg class="i"><use href="#i-van"/></svg></span><h3>Mobile outreach</h3><p>Out 6 to 7 days a week across Philadelphia and nearby counties.</p><ul><li>Food and supply distribution</li><li>Emergency food within 24 hours of a call</li><li>Treatment referrals</li><li>Connection to social services</li></ul></div>
+  <div class="sb" id="events"><span class="ico"><svg class="i"><use href="#i-music"/></svg></span><h3>Harm reduction event support</h3><p>Built for your event: festivals, raves, concerts and community gatherings.</p><ul><li>Naloxone and fentanyl testing strips</li><li>Safer use materials and tabling</li><li>Staff trainings and educational materials</li><li>First aid and on-site response</li></ul><a class="btn" href="#contact/event">Request event support</a></div>
+  <div class="sb" id="weather"><span class="ico"><svg class="i"><use href="#i-temp"/></svg></span><h3>Extreme weather response</h3><ul><li><b>Heat:</b> cold drinks, cooling towels, electrolytes, transportation</li><li><b>Cold:</b> hot drinks, blankets, mylar, warm clothing, transportation</li><li>On-site emergency medical response</li></ul></div>
+  <div class="sb" id="holiday"><span class="ico"><svg class="i"><use href="#i-gift"/></svg></span><h3>Holiday events</h3><ul><li>Two Thanksgiving feasts, one at each site</li><li>175+ Thanksgiving family boxes in 2025</li><li>Annual toy giveaway: about 1,000 toys for kids</li></ul></div>
+  <div class="sb" id="specialized"><span class="ico"><svg class="i"><use href="#i-people"/></svg></span><h3>Specialized support</h3><p>Meeting people wherever life has taken them.</p><ul><li>Support for people in treatment, newly housed or in the hospital</li><li>40+ water shoes for Kensington youth (2023)</li><li>800 outfits for low-income housing programs (2024)</li><li>1,600 lbs of food to Conwell Middle during SNAP cuts (2025)</li></ul></div>
+</div></section>
 </div>
 
 <!-- ============ ABOUT ============ -->
 <div id="p-about" class="pg" data-title="About | The Everywhere Project">
-<div class="ih"><div class="ih-eye">Our story</div><h1>Born from necessity.<br><em>Built on showing up.</em></h1><p>A chance meeting in a Philadelphia subway station became one of the city's most active harm reduction organizations.</p></div>
-<div class="ab-body">
-  <div class="ab-story">
-    <h2>December 2020, Center City</h2>
-    <p>It was cold. Months into the COVID-19 pandemic, overdoses were higher than they'd been in years, and nearly every existing outreach organization had stopped going out.</p>
-    <p>Jen had been doing street outreach for years. Shannon had just started and ran out of supplies within an hour. Jen loaded her up from her car without hesitation. They exchanged numbers and kept showing up, together.</p>
-    <blockquote class="ab-q">"We believe that people need people, and none of us can get through life alone."</blockquote>
-    <p>Four months later, they filed articles of incorporation. 501(c)(3) by May 2021. First week at LOVE Park: 30 people served. Now: 300+ every Wednesday. 5 million meals. #2 safer-use supplier in Philadelphia. Zero missed outreach events, ever.</p>
-    <div class="mv-grid">
-      <div class="mv"><h3>Mission</h3><p>Expand access to harm reduction services and education across Philadelphia through naloxone, testing strips, safer use kits, and community presence.</p></div>
-      <div class="mv"><h3>Vision</h3><p>A world without overdoses, where substance use is no longer stigmatized and every person receives the support and dignity they deserve.</p></div>
-    </div>
+<section class="ih"><div class="wrap"><div class="panel w-blush"><span class="shape"></span><span class="shape s2"></span>
+  <div class="eyebrow">Our story</div>
+  <h1>Born from necessity. Built on showing up.</h1>
+  <p class="lg">A chance meeting in a Philadelphia subway station became one of the city's most active harm reduction organizations.</p>
+</div></div></section>
+<section class="band"><div class="wrap"><div class="ab">
+  <h2>December 2020, Center City</h2>
+  <p class="lg">It was cold. Months into the COVID-19 pandemic, overdoses were higher than they'd been in years, and nearly every outreach organization had stopped going out.</p>
+  <p class="lg">Jen had been doing street outreach for years. Shannon had just started and ran out of supplies within an hour. Jen loaded her up from her car without hesitation. They swapped numbers and kept showing up, together.</p>
+  <blockquote class="pull">We believe that people need people, and none of us can get through life alone.</blockquote>
+  <p class="lg">Four months later they filed articles of incorporation, and TEP was a 501(c)(3) by May 2021. First week at LOVE Park: 30 people served. Now: 300+ every Wednesday, 5 million meals, the #2 safer-use supplier in Philadelphia, and zero missed outreach nights.</p>
+  <div class="mv">
+    <div class="card"><div class="eyebrow" style="margin:0">Mission</div><p style="color:var(--ink)">Expand access to harm reduction services and education across Philadelphia through naloxone, testing strips, safer use kits and community presence.</p></div>
+    <div class="card"><div class="eyebrow" style="margin:0">Vision</div><p style="color:var(--ink)">A world without overdoses, where substance use is no longer stigmatized and every person receives the support and dignity they deserve.</p></div>
   </div>
-</div>
-<div class="team-sec" id="team">
-  <div class="lbl">The team</div>
-  <h2 class="serif-lg">The people who show up</h2>
-  <div class="team-grid">
-    <div class="tc"><div class="tc-av">SA</div><div class="tc-n">Shannon Ashe</div><div class="tc-r">Co-Founder</div><div class="tc-c">MSW, LCSW</div></div>
-    <div class="tc"><div class="tc-av">JS</div><div class="tc-n">Jen Shinefeld</div><div class="tc-r">Co-Founder</div><div class="tc-c">M.S.</div></div>
-    <div class="tc"><div class="tc-av">TF</div><div class="tc-n">Thomas Frey</div><div class="tc-r">Director of Operations</div></div>
-    <div class="tc"><div class="tc-av">SB</div><div class="tc-n">Steven Bravato</div><div class="tc-r">Operations Specialist</div></div>
-    <div class="tc"><div class="tc-av">JS</div><div class="tc-n">James Sherman</div><div class="tc-r">Volunteer Coordinator</div></div>
-    <div class="tc"><div class="tc-av">GP</div><div class="tc-n">Galen Pugh</div><div class="tc-r">Director of Finance</div></div>
-    <div class="tc"><div class="tc-av">GF</div><div class="tc-n">Greg Frey</div><div class="tc-r">Harm Reduction Specialist</div></div>
-    <div class="tc"><div class="tc-av">ES</div><div class="tc-n">Emily Seeburger</div><div class="tc-r">Volunteer Coordinator</div></div>
+</div></div></section>
+<section class="band paper" id="team"><div class="wrap">
+  <div class="head"><div class="eyebrow t">The team</div><h2>The people who show up</h2></div>
+  <div class="team">
+    <div class="tc"><div class="av">SA</div><b>Shannon Ashe</b><span>Co-founder</span><em>MSW, LCSW</em></div>
+    <div class="tc"><div class="av">JS</div><b>Jen Shinefeld</b><span>Co-founder</span><em>M.S.</em></div>
+    <div class="tc"><div class="av">TF</div><b>Thomas Frey</b><span>Director of Operations</span></div>
+    <div class="tc"><div class="av">SB</div><b>Steven Bravato</b><span>Operations Specialist</span></div>
+    <div class="tc"><div class="av">JS</div><b>James Sherman</b><span>Volunteer Coordinator</span></div>
+    <div class="tc"><div class="av">GP</div><b>Galen Pugh</b><span>Director of Finance</span></div>
+    <div class="tc"><div class="av">GF</div><b>Greg Frey</b><span>Harm Reduction Specialist</span></div>
+    <div class="tc"><div class="av">ES</div><b>Emily Seeburger</b><span>Volunteer Coordinator</span></div>
   </div>
-</div>
+</div></section>
 </div>
 
 <!-- ============ RESOURCES ============ -->
-<!-- To link a real PDF, replace a card's "#contact/resource" with the file URL and change the text to "Download PDF". -->
+<!-- To link a real PDF, replace a card's "#contact/resource" with the file URL and change the link text. -->
 <div id="p-resources" class="pg" data-title="Resources | The Everywhere Project">
-<div class="ih"><div class="ih-eye">Resources</div><h1>Evidence-based.<br><em>Free to share.</em></h1><p>Harm reduction materials by TEP's co-founders: printable, shareable, grounded in current research.</p></div>
-<div class="res-body">
-  <div class="res-grid">
-    <div class="rc"><div class="rc-tag">Overdose Prevention</div><h3>Naloxone Administration Guide</h3><p>Step-by-step overdose reversal training, when to use naloxone, and what to do after. English and Spanish.</p><a class="rc-dl" href="#contact/resource">Request a copy &rarr;</a></div>
-    <div class="rc"><div class="rc-tag">Drug Checking</div><h3>Fentanyl Testing Strips Guide</h3><p>How to use strips, interpret results, and understand the limits of drug checking.</p><a class="rc-dl" href="#contact/resource">Request a copy &rarr;</a></div>
-    <div class="rc"><div class="rc-tag">Wound Care</div><h3>Xylazine and Tranq Wound Care</h3><p>Comprehensive wound care for xylazine-related skin wounds: cleaning, dressing, when to seek care.</p><a class="rc-dl" href="#contact/resource">Request a copy &rarr;</a></div>
-    <div class="rc"><div class="rc-tag">Education</div><h3>Safer Snorting Guide</h3><p>Reducing risk of infection, nosebleeds, and disease transmission from snorting substances.</p><a class="rc-dl" href="#contact/resource">Request a copy &rarr;</a></div>
-    <div class="rc"><div class="rc-tag">Education</div><h3>Xylazine (Tranq) Overview</h3><p>What xylazine is, how it interacts with opioids, and why it matters for overdose response.</p><a class="rc-dl" href="#contact/resource">Request a copy &rarr;</a></div>
-    <div class="rc"><div class="rc-tag">Training</div><h3>Request a Training</h3><p>TEP provides staff trainings on naloxone, harm reduction basics, and overdose response for organizations and events.</p><a class="rc-dl" href="#contact/training">Get in touch &rarr;</a></div>
-  </div>
-</div>
+<section class="ih"><div class="wrap"><div class="panel w-purple"><span class="shape"></span><span class="shape s2"></span>
+  <div class="eyebrow">Resources</div>
+  <h1>Evidence-based. Free to share.</h1>
+  <p class="lg">Harm reduction materials by TEP's co-founders: printable, shareable and grounded in current research.</p>
+</div></div></section>
+<section class="band"><div class="wrap grid3">
+  <div class="card bordered rc"><span class="ico"><svg class="i"><use href="#i-pill"/></svg></span><div class="eyebrow">Overdose prevention</div><h3>Naloxone guide</h3><p>Step-by-step overdose reversal, when to use naloxone and what to do after. English and Spanish.</p><a class="link" href="#contact/resource">Request a copy <svg class="i"><use href="#i-arrow"/></svg></a></div>
+  <div class="card bordered rc"><span class="ico"><svg class="i"><use href="#i-file"/></svg></span><div class="eyebrow">Drug checking</div><h3>Fentanyl testing strips</h3><p>How to use strips, read results and understand the limits of drug checking.</p><a class="link" href="#contact/resource">Request a copy <svg class="i"><use href="#i-arrow"/></svg></a></div>
+  <div class="card bordered rc"><span class="ico"><svg class="i"><use href="#i-heart"/></svg></span><div class="eyebrow">Wound care</div><h3>Xylazine wound care</h3><p>Caring for xylazine-related skin wounds: cleaning, dressing and when to seek care.</p><a class="link" href="#contact/resource">Request a copy <svg class="i"><use href="#i-arrow"/></svg></a></div>
+  <div class="card bordered rc"><span class="ico"><svg class="i"><use href="#i-file"/></svg></span><div class="eyebrow">Education</div><h3>Safer snorting guide</h3><p>Lowering the risk of infection, nosebleeds and disease transmission when snorting.</p><a class="link" href="#contact/resource">Request a copy <svg class="i"><use href="#i-arrow"/></svg></a></div>
+  <div class="card bordered rc"><span class="ico"><svg class="i"><use href="#i-file"/></svg></span><div class="eyebrow">Education</div><h3>Xylazine (tranq) overview</h3><p>What xylazine is, how it interacts with opioids and why it matters for overdose response.</p><a class="link" href="#contact/resource">Request a copy <svg class="i"><use href="#i-arrow"/></svg></a></div>
+  <div class="card bordered rc"><span class="ico"><svg class="i"><use href="#i-people"/></svg></span><div class="eyebrow">Training</div><h3>Request a training</h3><p>Staff trainings on naloxone, harm reduction basics and overdose response for organizations and events.</p><a class="link" href="#contact/training">Get in touch <svg class="i"><use href="#i-arrow"/></svg></a></div>
+</div></section>
 </div>
 
 <!-- ============ GET INVOLVED ============ -->
-<div id="p-involved" class="pg" data-title="Get Involved | The Everywhere Project">
-<div class="ih"><div class="ih-eye">Get involved</div><h1>Show up with us.<br><em>Your community needs you.</em></h1><p>No experience required. Volunteers are why we serve 1,000+ neighbors every week.</p></div>
-<div class="point-wrap">
+<div id="p-involved" class="pg" data-title="Get involved | The Everywhere Project">
+<section class="ih"><div class="wrap"><div class="panel w-blush"><span class="shape"></span><span class="shape s2"></span>
+  <div class="eyebrow">Get involved</div>
+  <h1>Show up with us.</h1>
+  <p class="lg">No experience needed. Volunteers are why we serve 1,000+ neighbors every week. Pick a shift below.</p>
+</div></div></section>
+<section class="point"><div class="wrap">
 <iframe width="100%" height="1650" id="point_iframe" src="https://pointapp.org/embed/d501800f-4263-4b71-b964-a9d8a7311c6f?size=12&show_search=true&viewOptions=calendar,list&showDayOfWeek=true&showLocation=true&showOrganization=true&widgetId=1946" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="display: flex" allowFullScreen></iframe><script src="https://pointapp.org/embed/assets/js/iframe-scripts.js" data-frame-id="1946"></script>
-</div>
-</div>
+</div></section>
 </div>
 
 <!-- ============ DONATE ============ -->
 <div id="p-donate" class="pg" data-title="Donate | The Everywhere Project">
-<div class="ih"><div class="ih-eye">Make a difference</div><h1>Your support keeps us<br><em>showing up.</em></h1><p>Every dollar funds naloxone, food, clothing, and supplies for Philadelphia's most vulnerable neighbors. Fully tax deductible.</p></div>
-<div class="don">
-  <div class="gb-wrap">
+<section class="ih"><div class="wrap"><div class="panel w-blush"><span class="shape"></span><span class="shape s2"></span>
+  <div class="eyebrow">Donate</div>
+  <h1>Your support keeps us showing up.</h1>
+  <p class="lg">Every dollar funds naloxone, food, clothing and supplies for Philadelphia's most vulnerable neighbors. Fully tax deductible.</p>
+</div></div></section>
+<section class="band"><div class="wrap don">
+  <div class="gb">
     <givebutter-widget id="gmkX5j"></givebutter-widget>
-    <p class="d-note" style="margin-top:12px">Secure via Givebutter · Tax-deductible · 501(c)(3). Trouble with the form? <a href="https://givebutter.com/everywhere-project" target="_blank" rel="noopener" style="color:var(--terra)">Donate on Givebutter &rarr;</a></p>
+    <p class="small" style="margin-top:var(--s4)">Secure via Givebutter · Tax-deductible · 501(c)(3). Trouble with the form? <a href="https://givebutter.com/everywhere-project" target="_blank" rel="noopener">Donate on Givebutter</a></p>
   </div>
-  <div class="d-aside">
-    <div class="ai"><div class="a-icon">💊</div><div><h4>Naloxone saves lives</h4><p>TEP is the #2 provider of safer-use supplies in Philadelphia. Every kit is a potential life saved.</p></div></div>
-    <div class="a-div"></div>
-    <div class="ai"><div class="a-icon">🍲</div><div><h4>5 million meals distributed</h4><p>Not one outreach event missed since 2021. Your donation keeps that streak alive.</p></div></div>
-    <div class="a-div"></div>
-    <div class="ai"><div class="a-icon">👕</div><div><h4>Clothing, hygiene and more</h4><p>Wound care, clothing, and human connection, every single week in every kind of weather.</p></div></div>
-    <div class="a-div"></div>
-    <p class="a-wish">Prefer to donate supplies? <a href="https://a.co/068DgYwJ" target="_blank" rel="noopener">View the Amazon Wishlist &rarr;</a></p>
+  <div class="aside">
+    <div class="ai"><span class="ico"><svg class="i"><use href="#i-pill"/></svg></span><div><b>Naloxone saves lives</b><p>TEP is the #2 provider of safer-use supplies in Philadelphia. Every kit is a life that can be saved.</p></div></div>
+    <hr>
+    <div class="ai"><span class="ico"><svg class="i"><use href="#i-meal"/></svg></span><div><b>5 million meals shared</b><p>Not one outreach night missed since 2021. Your gift keeps that streak alive.</p></div></div>
+    <hr>
+    <div class="ai"><span class="ico"><svg class="i"><use href="#i-shirt"/></svg></span><div><b>Clothing, hygiene and more</b><p>Wound care, clothing and human connection, every week in every kind of weather.</p></div></div>
+    <hr>
+    <div class="ai"><span class="ico"><svg class="i"><use href="#i-cart"/></svg></span><div><b>Prefer to give supplies?</b><p><a href="https://a.co/068DgYwJ" target="_blank" rel="noopener">Shop our Amazon wish list</a></p></div></div>
   </div>
-</div>
+</div></section>
 </div>
 
 <!-- ============ CONTACT ============ -->
 <div id="p-contact" class="pg" data-title="Contact | The Everywhere Project">
-<div class="ih"><div class="ih-eye">Contact</div><h1>We'd love to<br><em>hear from you.</em></h1><p>Partners, event organizers, volunteers, donors: reach out anytime.</p></div>
-<div class="co-body">
-  <form class="f-stack" id="contact-form" novalidate>
-    <div class="f-row2">
+<section class="ih"><div class="wrap"><div class="panel w-teal"><span class="shape"></span><span class="shape s2"></span>
+  <div class="eyebrow t">Contact</div>
+  <h1>We'd love to hear from you.</h1>
+  <p class="lg">Partners, event organizers, volunteers and donors: reach out anytime.</p>
+</div></div></section>
+<section class="band"><div class="wrap co">
+  <form id="contact-form" novalidate>
+    <div class="row2">
       <div class="fg"><label for="cf-first">First name</label><input id="cf-first" type="text" autocomplete="given-name" required></div>
       <div class="fg"><label for="cf-last">Last name</label><input id="cf-last" type="text" autocomplete="family-name"></div>
     </div>
@@ -551,7 +573,7 @@ footer{background:var(--ink);padding:48px var(--pad) 26px}
     <div class="fg"><label for="cf-topic">What can we help with?</label>
       <select id="cf-topic">
         <option value="general">General question</option>
-        <option value="volunteer">Volunteer inquiry</option>
+        <option value="volunteer">Volunteering</option>
         <option value="event">Event support request</option>
         <option value="donation">Donation or partnership</option>
         <option value="media">Media or press</option>
@@ -560,129 +582,126 @@ footer{background:var(--ink);padding:48px var(--pad) 26px}
         <option value="clothing">Clothing donation</option>
       </select>
     </div>
-    <div class="fg"><label for="cf-msg">Message</label><textarea id="cf-msg" placeholder="Tell us what's on your mind..." required></textarea></div>
-    <button class="sbtn" type="submit">Send message</button>
-    <p class="f-hint">Opens your email app with your message ready to send.</p>
-    <div class="f-ok" id="f-ok" role="status"></div>
+    <div class="fg"><label for="cf-msg">Message</label><textarea id="cf-msg" placeholder="Tell us what's on your mind" required></textarea></div>
+    <button class="btn" type="submit">Send message</button>
+    <p class="small">Opens your email app with your message ready to send.</p>
+    <div class="ok" id="f-ok" role="status"></div>
   </form>
-  <div class="co-info">
-    <div class="ci"><div class="ci-icon">📧</div><div><h4>General</h4><p><a href="mailto:info@everywhereproject.org">info@everywhereproject.org</a></p></div></div>
-    <div class="ci"><div class="ci-icon">🤝</div><div><h4>Volunteering</h4><p>James "Sherm" Sherman<br><a href="mailto:sherm@everywhereproject.org">sherm@everywhereproject.org</a></p></div></div>
-    <div>
-      <div class="lbl" style="margin-bottom:8px">Find us at outreach</div>
-      <div class="site-cards">
-        <a class="site-c" href="https://maps.google.com/?q=LOVE+Park+Philadelphia+PA" target="_blank" rel="noopener"><h4>LOVE Park, Wednesdays</h4><p>7:00–9:00 PM · 15th &amp; JFK Blvd, Center City</p></a>
-        <a class="site-c" href="https://maps.google.com/?q=Ruth+St+and+E+Clearfield+St+Philadelphia+PA" target="_blank" rel="noopener"><h4>Kensington, Saturdays</h4><p>1:00–4:00 PM · Ruth &amp; Clearfield St., Kensington</p></a>
-      </div>
-    </div>
-    <div class="follow">
-      <div class="lbl" style="margin-bottom:4px">Follow along</div>
-      <p>Most current updates on Instagram: <a href="https://instagram.com/the_everywhere_project" target="_blank" rel="noopener">@the_everywhere_project</a></p>
-    </div>
+  <div class="info">
+    <div class="place"><span class="ico" style="background:var(--teal-100)"><svg class="i"><use href="#i-mail"/></svg></span><div><b>General</b><a href="mailto:info@everywhereproject.org">info@everywhereproject.org</a></div></div>
+    <div class="place"><span class="ico" style="background:var(--teal-100)"><svg class="i"><use href="#i-people"/></svg></span><div><b>Volunteering</b>James "Sherm" Sherman<br><a href="mailto:sherm@everywhereproject.org">sherm@everywhereproject.org</a></div></div>
+    <div class="place"><span class="ico" style="background:var(--teal-100)"><svg class="i"><use href="#i-pin"/></svg></span><div><b>LOVE Park, Wednesdays</b>7 to 9 PM · 15th &amp; JFK Blvd, Center City<br><a href="https://maps.google.com/?q=LOVE+Park+Philadelphia+PA" target="_blank" rel="noopener">Get directions</a></div></div>
+    <div class="place"><span class="ico" style="background:var(--teal-100)"><svg class="i"><use href="#i-pin"/></svg></span><div><b>Kensington, Saturdays</b>1 to 4 PM · Ruth &amp; Clearfield St.<br><a href="https://maps.google.com/?q=Ruth+St+and+E+Clearfield+St+Philadelphia+PA" target="_blank" rel="noopener">Get directions</a></div></div>
+    <div class="place"><span class="ico" style="background:var(--teal-100)"><svg class="i"><use href="#i-insta"/></svg></span><div><b>Follow along</b>Most current updates on Instagram: <a href="https://instagram.com/the_everywhere_project" target="_blank" rel="noopener">@the_everywhere_project</a></div></div>
   </div>
-</div>
+</div></section>
 </div>
 
 </main>
 
 <footer>
-  <div class="f-grid">
-    <div><div class="f-bn">The Everywhere Project</div><p class="f-tg">Philadelphia-based harm reduction nonprofit. Expanding access since 2021.</p><p class="f-ein">501(c)(3) · EIN 86-3635473<br><a href="mailto:info@everywhereproject.org">info@everywhereproject.org</a></p></div>
-    <div class="f-col"><h4>Services</h4><a href="#services/meals">Community Meals</a><a href="#services/mobile">Mobile Outreach</a><a href="#services/events">Event Support</a><a href="#services/weather">Extreme Weather</a></div>
-    <div class="f-col"><h4>Organization</h4><a href="#about">Our Story</a><a href="#about/team">Team</a><a href="#resources">Resources</a><a href="#contact">Contact</a></div>
-    <div class="f-col"><h4>Get Involved</h4><a href="#donate">Donate</a><a href="#involved">Volunteer</a><a href="https://a.co/068DgYwJ" target="_blank" rel="noopener">Amazon Wishlist</a><a href="https://www.bonfire.com/org/everywhere-project-863635473" target="_blank" rel="noopener">Merch Shop</a></div>
+  <div class="wrap">
+    <div class="fg4">
+      <div class="fbrand">
+        <a class="logo" href="#home"><svg aria-hidden="true"><use href="#i-mark"/></svg><span><b>The Everywhere Project</b></span></a>
+        <p class="lg">Harm Reduction is Love.</p>
+        <p class="small">Meeting people where they are, everyday.<br>501(c)(3) · EIN 86-3635473 · <a href="mailto:info@everywhereproject.org">info@everywhereproject.org</a></p>
+      </div>
+      <div class="fcol"><h4>Services</h4><a href="#services/meals">Community meals</a><a href="#services/mobile">Mobile outreach</a><a href="#services/events">Event support</a><a href="#services/weather">Extreme weather</a></div>
+      <div class="fcol"><h4>About</h4><a href="#about">Our story</a><a href="#about/team">Team</a><a href="#resources">Resources</a><a href="#contact">Contact</a></div>
+      <div class="fcol"><h4>Give</h4><a href="#donate">Donate</a><a href="#involved">Volunteer</a><a href="https://a.co/068DgYwJ" target="_blank" rel="noopener">Amazon wish list</a><a href="https://www.bonfire.com/org/everywhere-project-863635473" target="_blank" rel="noopener">Merch shop</a></div>
+    </div>
+    <div class="fbot">
+      <span class="small">© <span id="yr">2026</span> The Everywhere Project</span>
+      <div class="soc"><a href="https://instagram.com/the_everywhere_project" target="_blank" rel="noopener" aria-label="Instagram"><svg class="i"><use href="#i-insta"/></svg></a><a href="mailto:info@everywhereproject.org" aria-label="Email"><svg class="i"><use href="#i-mail"/></svg></a></div>
+    </div>
   </div>
-  <div class="f-bot"><span class="f-copy">© <span id="yr">2026</span> The Everywhere Project</span><div class="f-soc"><a class="soc" href="https://instagram.com/the_everywhere_project" target="_blank" rel="noopener">Instagram</a><a class="soc" href="https://givebutter.com/everywhere-project" target="_blank" rel="noopener">Givebutter</a></div></div>
 </footer>
 
 <script>
-/* ---------- EVENTS ----------
-   Weekly events repeat automatically, so the calendar never goes stale.
-   SKIP: dates (YYYY-MM-DD) when a weekly event is cancelled.
-   SPECIAL: one-off events. Example:
-   {date:'2027-06-06', title:'Daniel Pugh Memorial Golf Outing', where:'Tanglewood Manor, Quarryville PA'}
-*/
-var WEEKLY = [
-  {dow:3, title:'LOVE Park Outreach', where:'6:45 PM · 15th & JFK Blvd'},
-  {dow:4, title:'Thursday Kit Making', where:'6:00 PM · Contact Sherm for location'},
-  {dow:6, title:'Kensington Outreach', where:'12:30 PM · Ruth & Clearfield'}
+{
+/* ---------- EVENTS: What, When, Where ----------
+   Weekly events repeat automatically. SKIP: dates (YYYY-MM-DD) a weekly event is cancelled.
+   SPECIAL: one-off events, e.g. {date:'2027-06-06', title:'Daniel Pugh Memorial Golf Outing', time:'All day', where:'Tanglewood Manor, Quarryville PA'} */
+const WEEKLY = [
+  {dow:3, title:'LOVE Park outreach', time:'6:45 PM', where:'15th & JFK Blvd'},
+  {dow:4, title:'Kit making', time:'6:00 PM', where:'Contact Sherm for location'},
+  {dow:6, title:'Kensington outreach', time:'12:30 PM', where:'Ruth & Clearfield'}
 ];
-var SKIP = [];
-var SPECIAL = [];
+const SKIP = [];
+const SPECIAL = [];
 
-var MO = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-function ymd(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+const MO = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const DOW = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+const ymd = d => d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 function upcoming(n){
-  var out=[], today=new Date(); today.setHours(0,0,0,0);
-  SPECIAL.forEach(function(e){var d=new Date(e.date+'T00:00:00'); if(d>=today) out.push({d:d,title:e.title,where:e.where,sp:true});});
-  for(var i=0;i<60 && out.length<n+SPECIAL.length;i++){
-    var d=new Date(today); d.setDate(today.getDate()+i);
-    WEEKLY.forEach(function(w){ if(d.getDay()===w.dow && SKIP.indexOf(ymd(d))<0) out.push({d:d,title:w.title,where:w.where,weekly:true}); });
+  const out = [], today = new Date(); today.setHours(0,0,0,0);
+  SPECIAL.forEach(e => { const d = new Date(e.date+'T00:00:00'); if (d >= today) out.push({...e, d, sp:true}); });
+  for (let i = 0; i < 60; i++){
+    const d = new Date(today); d.setDate(today.getDate()+i);
+    WEEKLY.forEach(w => { if (d.getDay() === w.dow && !SKIP.includes(ymd(d))) out.push({...w, d}); });
   }
-  out.sort(function(a,b){return a.d-b.d});
-  return out.slice(0,n);
+  return out.sort((a,b) => a.d - b.d).slice(0, n);
 }
-function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;')}
-document.querySelectorAll('[data-events]').forEach(function(box){
-  box.innerHTML = upcoming(+box.dataset.events).map(function(e){
-    var badge = e.sp ? '<span class="ev-badge sp">Special</span>' : '<span class="ev-badge">Weekly</span>';
-    return '<div class="ev-row"><div class="ev-d"><div class="ev-day">'+e.d.getDate()+'</div><div class="ev-mo">'+MO[e.d.getMonth()]+'</div></div><div><div class="ev-t">'+esc(e.title)+' '+badge+'</div><div class="ev-m">'+esc(e.where)+'</div></div></div>';
-  }).join('');
+document.querySelectorAll('[data-events]').forEach(box => {
+  box.innerHTML = upcoming(+box.dataset.events).map(e =>
+    '<div class="evc"><div class="pill">'+MO[e.d.getMonth()]+'<b>'+e.d.getDate()+'</b></div><div>'+
+    '<div class="what">'+esc(e.title)+(e.sp ? '<span class="tag">Special</span>' : '')+'</div>'+
+    '<div class="meta"><span><svg class="i"><use href="#i-clock"/></svg>'+DOW[e.d.getDay()]+', '+esc(e.time)+'</span>'+
+    '<span><svg class="i"><use href="#i-pin"/></svg>'+esc(e.where)+'</span></div></div></div>'
+  ).join('');
 });
 document.getElementById('yr').textContent = new Date().getFullYear();
 
-/* ---------- ROUTING ----------
-   Each page has its own link: #services, #donate, #services/events, #contact/volunteer ... */
-var PAGES = ['home','services','about','resources','involved','donate','contact'];
-var links = document.getElementById('nav-links'), burger = document.querySelector('.n-burger');
-function closeMenu(){links.classList.remove('open'); burger.setAttribute('aria-expanded','false'); burger.setAttribute('aria-label','Open menu');}
+/* ---------- ROUTING: #services, #donate, #services/events, #contact/volunteer ... ---------- */
+const PAGES = ['home','services','about','resources','involved','donate','contact'];
+const links = document.getElementById('links'), burger = document.querySelector('.burger');
+function closeMenu(){ links.classList.remove('open'); burger.setAttribute('aria-expanded','false'); burger.setAttribute('aria-label','Open menu'); }
 function route(){
-  var parts = (location.hash.slice(1)||'home').split('/');
-  var page = PAGES.indexOf(parts[0])>=0 ? parts[0] : 'home';
-  var sub = parts[1];
-  document.querySelectorAll('.pg').forEach(function(p){p.classList.toggle('on', p.id==='p-'+page)});
-  document.querySelectorAll('.n-links a').forEach(function(a){a.classList.toggle('on', a.dataset.pg===page)});
-  var pg = document.getElementById('p-'+page);
-  document.title = pg.dataset.title;
+  const [p, sub] = (location.hash.slice(1) || 'home').split('/');
+  const page = PAGES.includes(p) ? p : 'home';
+  document.querySelectorAll('.pg').forEach(el => el.classList.toggle('on', el.id === 'p-'+page));
+  document.querySelectorAll('.links a').forEach(a => a.classList.toggle('on', a.dataset.pg === page));
+  document.title = document.getElementById('p-'+page).dataset.title;
   closeMenu();
-  if(page==='contact' && sub){
-    var sel=document.getElementById('cf-topic'); if(sel.querySelector('option[value="'+sub+'"]')) sel.value=sub;
+  if (page === 'contact' && sub){
+    const sel = document.getElementById('cf-topic');
+    if (sel.querySelector('option[value="'+sub+'"]')) sel.value = sub;
     window.scrollTo(0,0);
-  } else if(sub && document.getElementById(sub)){
-    requestAnimationFrame(function(){document.getElementById(sub).scrollIntoView({behavior:'smooth'})});
+  } else if (sub && document.getElementById(sub)){
+    requestAnimationFrame(() => document.getElementById(sub).scrollIntoView({behavior:'smooth'}));
   } else {
     window.scrollTo(0,0);
   }
 }
 window.addEventListener('hashchange', route);
 route();
-
-burger.addEventListener('click', function(){
-  var open = !links.classList.contains('open');
+burger.addEventListener('click', () => {
+  const open = !links.classList.contains('open');
   links.classList.toggle('open', open);
   burger.setAttribute('aria-expanded', open);
   burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
 });
-document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenu(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
 
-/* ---------- CONTACT ----------
-   No server needed: builds an email to the right inbox.
-   Volunteer and clothing questions go to Sherm, everything else to info@. */
-var ROUTES = {volunteer:'sherm@everywhereproject.org', clothing:'sherm@everywhereproject.org'};
+/* ---------- CONTACT: builds an email to the right inbox ---------- */
+const ROUTES = {volunteer:'sherm@everywhereproject.org', clothing:'sherm@everywhereproject.org'};
 document.getElementById('contact-form').addEventListener('submit', function(e){
   e.preventDefault();
-  var f=this, first=f.querySelector('#cf-first'), email=f.querySelector('#cf-email'), msg=f.querySelector('#cf-msg');
-  var bad=[first,email,msg].filter(function(el){return !el.value.trim() || (el.type==='email' && !el.checkValidity())});
-  [first,email,msg].forEach(function(el){el.style.borderColor = bad.indexOf(el)>=0 ? '#c0392b' : ''});
-  if(bad.length){bad[0].focus(); return;}
-  var topicSel=f.querySelector('#cf-topic'), topic=topicSel.value, label=topicSel.options[topicSel.selectedIndex].text;
-  var name=(first.value+' '+f.querySelector('#cf-last').value).trim();
-  var to = ROUTES[topic] || 'info@everywhereproject.org';
-  var body = msg.value + '\n\n' + name + '\n' + email.value;
-  location.href = 'mailto:'+to+'?subject='+encodeURIComponent(label+' from '+name)+'&body='+encodeURIComponent(body);
-  var ok=document.getElementById('f-ok'); ok.style.display='block';
-  ok.textContent='Your email app should open with the message ready. If it doesn\'t, write to '+to+'.';
+  const first = this.querySelector('#cf-first'), email = this.querySelector('#cf-email'), msg = this.querySelector('#cf-msg');
+  const req = [first, email, msg];
+  const bad = req.filter(el => !el.value.trim() || (el.type === 'email' && !el.checkValidity()));
+  req.forEach(el => el.classList.toggle('bad', bad.includes(el)));
+  if (bad.length){ bad[0].focus(); return; }
+  const sel = this.querySelector('#cf-topic'), label = sel.options[sel.selectedIndex].text;
+  const name = (first.value+' '+this.querySelector('#cf-last').value).trim();
+  const to = ROUTES[sel.value] || 'info@everywhereproject.org';
+  location.href = 'mailto:'+to+'?subject='+encodeURIComponent(label+' from '+name)+'&body='+encodeURIComponent(msg.value+'\n\n'+name+'\n'+email.value);
+  const ok = document.getElementById('f-ok'); ok.style.display = 'block';
+  ok.textContent = 'Your email app should open with the message ready. If it doesn\'t, write to '+to+'.';
 });
+}
 </script>
 </body>
 </html>
