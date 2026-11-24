@@ -28,7 +28,7 @@
   --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:72px;--s9:120px;
   --r-sm:6px;--r-md:16px;--r-lg:32px;--r-pill:999px;
   --shadow:0 8px 24px rgba(29,30,33,.08);
-  --nav:76px;
+  --nav:88px;
 }
 html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav) + 16px)}
 body{font-family:var(--sans);font-size:16px;line-height:26px;color:var(--ink);background:var(--surface);-webkit-font-smoothing:antialiased;overflow-x:clip}
@@ -73,7 +73,7 @@ p+p{margin-top:var(--s4)}
 .nav{position:fixed;inset:0 0 auto;z-index:100;height:var(--nav);background:rgba(255,255,255,.97);border-bottom:1px solid var(--hairline)}
 .nav .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:var(--s5)}
 .logo{display:flex;align-items:center;gap:var(--s3);text-decoration:none;color:var(--ink)}
-.logo svg{width:44px;height:44px;flex:none}
+.logo img{width:64px;height:64px;flex:none}
 .logo b{font-size:15px;line-height:18px;font-weight:700}
 .logo small{display:block;font-size:11px;line-height:14px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted)}
 .links{display:flex;align-items:center;gap:var(--s5)}
@@ -104,9 +104,8 @@ main{padding-top:var(--nav)}
 .blob.a{width:78%;height:72%;right:-4%;top:2%;background:var(--blush-200);border-radius:58% 42% 55% 45%/50% 60% 40% 50%}
 .blob.b{width:40%;height:38%;left:-2%;bottom:0;background:var(--peach-200);border-radius:45% 55% 60% 40%/55% 45% 55% 45%}
 .blob.c{width:26%;aspect-ratio:1;right:2%;bottom:10%;border:10px solid var(--teal-200)}
-/* To use a real outreach photo: <div class="photo" style="background-image:url('outreach.jpg')"> and delete the svg inside it */
 .photo{position:absolute;left:12%;top:12%;width:70%;height:66%;border-radius:var(--r-md);background:var(--teal-200) center/cover;display:grid;place-items:center;overflow:hidden}
-.photo svg{width:46%;height:46%;stroke:#fff;stroke-width:1.2;fill:none;opacity:.9}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
 .quote{position:absolute;left:0;bottom:8%;width:72%;background:var(--surface);border-radius:var(--r-md);box-shadow:var(--shadow);padding:var(--s5)}
 .quote .mark{font-size:56px;line-height:30px;font-weight:800;color:var(--purple-700);display:block;height:26px}
 .quote p{font-weight:600;font-size:16px;line-height:24px}
@@ -271,7 +270,7 @@ footer{background:var(--paper);border-top:1px solid var(--hairline);padding:var(
   .fbrand{grid-column:1/-1}
 }
 @media (max-width:640px){
-  :root{--nav:68px}
+  :root{--nav:84px}
   .wrap{padding:0 var(--s4)}
   .band{padding:var(--s8) 0}
   .hero{padding:var(--s6) 0 var(--s8)}
@@ -281,7 +280,6 @@ footer{background:var(--paper);border-top:1px solid var(--hairline);padding:var(
   h2,.h2{font-size:26px;line-height:34px}
   h3,.h3{font-size:21px;line-height:28px}
   .logo small{display:none}
-  .logo svg{width:40px;height:40px}
   .cta-row>*{flex:1 1 auto}
   .cta-row .btn{justify-content:center}
   .grid3,.svc,.mv,.row2{grid-template-columns:minmax(0,1fr)}
@@ -295,6 +293,31 @@ footer{background:var(--paper);border-top:1px solid var(--hairline);padding:var(
   .sticker{font-size:13px}
   .fg4{grid-template-columns:repeat(2,minmax(0,1fr))}
   .point{padding:var(--s5) 0 var(--s8)}
+}
+
+/* PHOTOS */
+.mosaic{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr);gap:var(--s4);margin-top:var(--s7);height:440px}
+.mosaic img,.wide img,.ih-img img{width:100%;height:100%;object-fit:cover;border-radius:var(--r-md);display:block}
+.wide{margin-top:var(--s7)}
+.wide img{height:auto;aspect-ratio:21/9}
+.wide figcaption{margin-top:var(--s2)}
+.panel.has-img{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:var(--s7);align-items:center;padding:var(--s7)}
+.ih .panel.has-img>*{max-width:none}
+.ih-text{max-width:620px}
+.ih-img{position:relative;margin:0;aspect-ratio:4/3}
+.ih-img::before{content:'';position:absolute;inset:16px -16px -16px 16px;border-radius:var(--r-md);background:var(--surface);opacity:.6}
+.ih-img img{position:relative}
+.panel.has-img .shape{right:auto;left:-80px;top:auto;bottom:-120px;width:260px;height:260px}
+@media (max-width:1000px){
+  .panel.has-img{grid-template-columns:minmax(0,1fr)}
+  .ih-img{aspect-ratio:16/10;margin-right:16px}
+}
+@media (max-width:640px){
+  .mosaic{grid-template-columns:1fr 1fr;height:auto}
+  .mosaic img:first-child{grid-column:1/-1;aspect-ratio:3/2}
+  .mosaic img:not(:first-child){aspect-ratio:4/5}
+  .wide img{aspect-ratio:4/3}
+  .panel.has-img{padding:var(--s6) var(--s5);gap:var(--s6)}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
@@ -326,7 +349,7 @@ footer{background:var(--paper);border-top:1px solid var(--hairline);padding:var(
 <nav class="nav" aria-label="Main">
   <div class="wrap">
     <a class="logo" href="#home" aria-label="The Everywhere Project home">
-      <svg aria-hidden="true"><use href="#i-mark"/></svg>
+      <img src="images/tep-badge.png" alt="" width="64" height="64">
       <span><b>The Everywhere Project</b><small>Harm Reduction is Love</small></span>
     </a>
     <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="links"><span></span><span></span><span></span></button>
@@ -358,11 +381,11 @@ footer{background:var(--paper);border-top:1px solid var(--hairline);padding:var(
         <a class="btn ghost" href="#involved">Volunteer</a>
       </div>
     </div>
-    <div class="art" aria-hidden="true">
-      <div class="blob a"></div>
-      <div class="blob b"></div>
-      <div class="blob c"></div>
-      <div class="photo"><svg viewBox="0 0 24 24"><use href="#i-heart"/></svg></div>
+    <div class="art">
+      <div class="blob a" aria-hidden="true"></div>
+      <div class="blob b" aria-hidden="true"></div>
+      <div class="blob c" aria-hidden="true"></div>
+      <div class="photo"><img src="images/hero-sharing-food.jpg" width="1400" height="1320" fetchpriority="high" alt="A volunteer in gloves hands a wrapped meal to a neighbor at outreach"></div>
       <div class="sticker"><b>0</b> outreach nights missed</div>
       <div class="quote">
         <span class="mark">&ldquo;</span>
@@ -393,6 +416,11 @@ footer{background:var(--paper);border-top:1px solid var(--hairline);padding:var(
       <p class="lg"><strong>Overdoses are preventable.</strong> Harm reduction is love.</p>
       <a class="link" href="#about" style="margin-top:var(--s5)">Our story <svg class="i"><use href="#i-arrow"/></svg></a>
     </div>
+  </div>
+  <div class="wrap mosaic">
+    <img src="images/kensington-line.jpg" width="1600" height="1066" loading="lazy" alt="Neighbors lined up under outreach tents in Kensington">
+    <img src="images/narcan.jpg" width="1000" height="667" loading="lazy" alt="Boxes of Narcan nasal spray ready to hand out">
+    <img src="images/hoodie.jpg" width="576" height="720" loading="lazy" alt="The back of a hoodie that reads Harm Reduction is Love">
   </div>
 </section>
 
@@ -429,6 +457,7 @@ footer{background:var(--paper);border-top:1px solid var(--hairline);padding:var(
       <li><div class="yr">2025</div><h3>SNAP response</h3><p>175 Thanksgiving boxes and 1,600 lbs of food to Conwell Middle School.</p></li>
     </ol>
   </div>
+  <figure class="wrap wide"><img src="images/love-park.jpg" width="1400" height="933" loading="lazy" alt="Neighbors lined up for a meal at LOVE Park in Center City"><figcaption class="small">Wednesday night at LOVE Park.</figcaption></figure>
 </section>
 
 <section class="band w-blush">
@@ -454,10 +483,13 @@ footer{background:var(--paper);border-top:1px solid var(--hairline);padding:var(
 
 <!-- ============ SERVICES ============ -->
 <div id="p-services" class="pg" data-title="Services | The Everywhere Project">
-<section class="ih"><div class="wrap"><div class="panel w-teal"><span class="shape"></span><span class="shape s2"></span>
+<section class="ih"><div class="wrap"><div class="panel has-img w-teal"><span class="shape"></span>
+  <div class="ih-text">
   <div class="eyebrow t">Services</div>
   <h1>Low barrier. Judgment free. Always showing up.</h1>
   <p class="lg">We meet people where they are, on their terms, without conditions.</p>
+</div>
+  <figure class="ih-img"><img src="images/kensington-outreach.jpg" width="1400" height="933" alt="TEP's Saturday outreach tents in Kensington" style="object-position:center"></figure>
 </div></div></section>
 <section class="band"><div class="wrap svc">
   <div class="sb" id="meals"><span class="ico"><svg class="i"><use href="#i-meal"/></svg></span><h3>Community meals</h3><p>Two weekly sites, never missed since 2021.</p><ul><li>Hot food and to-go meals</li><li>Weather-appropriate clothing</li><li>Harm reduction support and education</li><li>Wound care (Saturdays)</li><li>Treatment referrals and social services</li><li>Hygiene and menstrual supplies</li></ul><div class="when"><b>Wednesdays, 7 to 9 PM</b> · LOVE Park, 15th &amp; JFK Blvd<br><b>Saturdays, 1 to 4 PM</b> · Ruth &amp; Clearfield, Kensington</div></div>
@@ -471,10 +503,13 @@ footer{background:var(--paper);border-top:1px solid var(--hairline);padding:var(
 
 <!-- ============ ABOUT ============ -->
 <div id="p-about" class="pg" data-title="About | The Everywhere Project">
-<section class="ih"><div class="wrap"><div class="panel w-blush"><span class="shape"></span><span class="shape s2"></span>
+<section class="ih"><div class="wrap"><div class="panel has-img w-blush"><span class="shape"></span>
+  <div class="ih-text">
   <div class="eyebrow">Our story</div>
   <h1>Born from necessity. Built on showing up.</h1>
   <p class="lg">A chance meeting in a Philadelphia subway station became one of the city's most active harm reduction organizations.</p>
+</div>
+  <figure class="ih-img"><img src="images/tep-bus.jpg" width="1400" height="933" alt="The TEP bus, covered in names written by the community" style="object-position:center"></figure>
 </div></div></section>
 <section class="band"><div class="wrap"><div class="ab">
   <h2>December 2020, Center City</h2>
@@ -505,10 +540,13 @@ footer{background:var(--paper);border-top:1px solid var(--hairline);padding:var(
 <!-- ============ RESOURCES ============ -->
 <!-- To link a real PDF, replace a card's "#contact/resource" with the file URL and change the link text. -->
 <div id="p-resources" class="pg" data-title="Resources | The Everywhere Project">
-<section class="ih"><div class="wrap"><div class="panel w-purple"><span class="shape"></span><span class="shape s2"></span>
+<section class="ih"><div class="wrap"><div class="panel has-img w-purple"><span class="shape"></span>
+  <div class="ih-text">
   <div class="eyebrow">Resources</div>
   <h1>Evidence-based. Free to share.</h1>
   <p class="lg">Harm reduction materials by TEP's co-founders: printable, shareable and grounded in current research.</p>
+</div>
+  <figure class="ih-img"><img src="images/test-strip.jpg" width="1400" height="933" alt="A xylazine test strip being explained at outreach" style="object-position:center"></figure>
 </div></div></section>
 <section class="band"><div class="wrap grid3">
   <div class="card bordered rc"><span class="ico"><svg class="i"><use href="#i-pill"/></svg></span><div class="eyebrow">Overdose prevention</div><h3>Naloxone guide</h3><p>Step-by-step overdose reversal, when to use naloxone and what to do after. English and Spanish.</p><a class="link" href="#contact/resource">Request a copy <svg class="i"><use href="#i-arrow"/></svg></a></div>
@@ -522,10 +560,13 @@ footer{background:var(--paper);border-top:1px solid var(--hairline);padding:var(
 
 <!-- ============ GET INVOLVED ============ -->
 <div id="p-involved" class="pg" data-title="Get involved | The Everywhere Project">
-<section class="ih"><div class="wrap"><div class="panel w-blush"><span class="shape"></span><span class="shape s2"></span>
+<section class="ih"><div class="wrap"><div class="panel has-img w-blush"><span class="shape"></span>
+  <div class="ih-text">
   <div class="eyebrow">Get involved</div>
   <h1>Show up with us.</h1>
   <p class="lg">No experience needed. Volunteers are why we serve 1,000+ neighbors every week. Pick a shift below.</p>
+</div>
+  <figure class="ih-img"><img src="images/wound-care-team.jpg" width="1400" height="952" alt="Volunteers laughing together during wound care at outreach" style="object-position:30% center"></figure>
 </div></div></section>
 <section class="point"><div class="wrap">
 <iframe width="100%" height="1650" id="point_iframe" src="https://pointapp.org/embed/d501800f-4263-4b71-b964-a9d8a7311c6f?size=12&show_search=true&viewOptions=calendar,list&showDayOfWeek=true&showLocation=true&showOrganization=true&widgetId=1946" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="display: flex" allowFullScreen></iframe><script src="https://pointapp.org/embed/assets/js/iframe-scripts.js" data-frame-id="1946"></script>
@@ -534,10 +575,13 @@ footer{background:var(--paper);border-top:1px solid var(--hairline);padding:var(
 
 <!-- ============ DONATE ============ -->
 <div id="p-donate" class="pg" data-title="Donate | The Everywhere Project">
-<section class="ih"><div class="wrap"><div class="panel w-blush"><span class="shape"></span><span class="shape s2"></span>
+<section class="ih"><div class="wrap"><div class="panel has-img w-blush"><span class="shape"></span>
+  <div class="ih-text">
   <div class="eyebrow">Donate</div>
   <h1>Your support keeps us showing up.</h1>
   <p class="lg">Every dollar funds naloxone, food, clothing and supplies for Philadelphia's most vulnerable neighbors. Fully tax deductible.</p>
+</div>
+  <figure class="ih-img"><img src="images/naloxone-pouch.jpg" width="1400" height="1175" alt="Naloxone going into a TEP naloxone saves lives pouch" style="object-position:center"></figure>
 </div></div></section>
 <section class="band"><div class="wrap don">
   <div class="gb">
@@ -603,7 +647,7 @@ footer{background:var(--paper);border-top:1px solid var(--hairline);padding:var(
   <div class="wrap">
     <div class="fg4">
       <div class="fbrand">
-        <a class="logo" href="#home"><svg aria-hidden="true"><use href="#i-mark"/></svg><span><b>The Everywhere Project</b></span></a>
+        <a class="logo" href="#home"><img src="images/tep-badge.png" alt="" width="64" height="64"><span><b>The Everywhere Project</b></span></a>
         <p class="lg">Harm Reduction is Love.</p>
         <p class="small">Meeting people where they are, everyday.<br>501(c)(3) · EIN 86-3635473 · <a href="mailto:info@everywhereproject.org">info@everywhereproject.org</a></p>
       </div>
