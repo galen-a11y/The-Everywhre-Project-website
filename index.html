@@ -11,6 +11,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%238b5fbf'/%3E%3Ctext x='16' y='21' font-family='Georgia,serif' font-style='italic' font-size='14' fill='white' text-anchor='middle'%3EEP%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script async src="https://js.givebutter.com/elements/latest.js?acct=FYYphp86genHuNnj"></script>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -231,7 +232,9 @@ footer{background:var(--ink);padding:48px var(--pad) 26px}
 .info-b a{color:var(--terra)}
 
 /* DONATE */
-.don{padding:60px var(--pad);background:var(--sand);display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
+.don{padding:60px var(--pad);background:var(--sand);display:grid;grid-template-columns:3fr 2fr;gap:52px;align-items:start}
+.gb-wrap{min-width:0}
+.gb-wrap givebutter-widget{display:block;width:100%}
 .g-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}
 .gc{background:var(--white);border:1.5px solid var(--sand-b);border-radius:8px;padding:15px 16px;cursor:pointer;transition:border-color .15s,background .15s;text-align:left;font-family:var(--sans)}
 .gc:hover{border-color:var(--terra)}
@@ -531,20 +534,9 @@ footer{background:var(--ink);padding:48px var(--pad) 26px}
 <div id="p-donate" class="pg" data-title="Donate | The Everywhere Project">
 <div class="ih"><div class="ih-eye">Make a difference</div><h1>Your support keeps us<br><em>showing up.</em></h1><p>Every dollar funds naloxone, food, clothing, and supplies for Philadelphia's most vulnerable neighbors. Fully tax deductible.</p></div>
 <div class="don">
-  <div>
-    <div class="lbl">Choose your impact</div>
-    <h2 class="serif-lg" style="font-size:28px">What your gift provides</h2>
-    <div class="g-grid">
-      <button class="gc" aria-pressed="false"><div class="g-amt">$25</div><div class="g-what">5 doses of naloxone, enough to reverse 5 overdoses</div></button>
-      <button class="gc" aria-pressed="true"><div class="g-pop">Most impactful</div><div class="g-amt">$50</div><div class="g-what">Full safer use and hygiene kit for one person for a week</div></button>
-      <button class="gc" aria-pressed="false"><div class="g-amt">$100</div><div class="g-what">One full kit-making session supplying a week of outreach</div></button>
-      <button class="gc" aria-pressed="false"><div class="g-amt">$250</div><div class="g-what">Supplies for an entire event serving 100+ people</div></button>
-    </div>
-    <div class="monthly"><b>Monthly giving, highest impact</b>A recurring gift lets us plan ahead and buy in bulk. $20/month = 240+ naloxone doses a year.</div>
-    <div class="d-go">
-      <a class="btn bt" id="donate-btn" href="https://givebutter.com/everywhere-project" target="_blank" rel="noopener">Donate $50 Now</a>
-      <span class="d-note">Secure via Givebutter · Tax-deductible · 501(c)(3)</span>
-    </div>
+  <div class="gb-wrap">
+    <givebutter-widget id="gmkX5j"></givebutter-widget>
+    <p class="d-note" style="margin-top:12px">Secure via Givebutter · Tax-deductible · 501(c)(3). Trouble with the form? <a href="https://givebutter.com/everywhere-project" target="_blank" rel="noopener" style="color:var(--terra)">Donate on Givebutter &rarr;</a></p>
   </div>
   <div class="d-aside">
     <div class="ai"><div class="a-icon">💊</div><div><h4>Naloxone saves lives</h4><p>TEP is the #2 provider of safer-use supplies in Philadelphia. Every kit is a potential life saved.</p></div></div>
@@ -684,16 +676,6 @@ burger.addEventListener('click', function(){
   burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
 });
 document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenu(); });
-
-/* ---------- DONATE ---------- */
-var donateBtn = document.getElementById('donate-btn');
-document.querySelectorAll('.gc').forEach(function(card){
-  card.addEventListener('click', function(){
-    document.querySelectorAll('.gc').forEach(function(c){c.setAttribute('aria-pressed','false')});
-    card.setAttribute('aria-pressed','true');
-    donateBtn.textContent = 'Donate ' + card.querySelector('.g-amt').textContent + ' Now';
-  });
-});
 
 /* ---------- CONTACT ----------
    No server needed: builds an email to the right inbox.
