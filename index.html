@@ -99,19 +99,20 @@ main{padding-top:var(--nav)}
 .hero .tracked{margin:var(--s5) 0 var(--s5);color:var(--ink)}
 .hero .lg{color:var(--ink-muted);max-width:480px}
 .cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s3);margin-top:var(--s6)}
-.art{position:relative;aspect-ratio:1/1.02;max-width:520px;width:100%;justify-self:end}
-.blob{position:absolute;border-radius:50%}
-.blob.a{width:78%;height:72%;right:-4%;top:2%;background:var(--blush-200);border-radius:58% 42% 55% 45%/50% 60% 40% 50%}
-.blob.b{width:40%;height:38%;left:-2%;bottom:0;background:var(--peach-200);border-radius:45% 55% 60% 40%/55% 45% 55% 45%}
-.blob.c{width:26%;aspect-ratio:1;right:2%;bottom:10%;border:10px solid var(--teal-200)}
-.photo{position:absolute;left:12%;top:12%;width:70%;height:66%;border-radius:var(--r-md);background:var(--teal-200) center/cover;display:grid;place-items:center;overflow:hidden}
-.photo img{width:100%;height:100%;object-fit:cover;display:block}
-.quote{position:absolute;left:0;bottom:8%;width:72%;background:var(--surface);border-radius:var(--r-md);box-shadow:var(--shadow);padding:var(--s5)}
+.art{position:relative;max-width:520px;width:100%;justify-self:end;padding:var(--s5) 0 var(--s5) var(--s5)}
+.blob{position:absolute;border-radius:50%;z-index:0}
+.blob.a{width:80%;height:70%;right:-3%;top:-2%;background:var(--blush-200);border-radius:58% 42% 55% 45%/50% 60% 40% 50%}
+.blob.b{width:44%;height:40%;left:-4%;bottom:-2%;background:var(--peach-200);border-radius:45% 55% 60% 40%/55% 45% 55% 45%}
+.blob.c{width:24%;aspect-ratio:1;right:-3%;bottom:26%;border:10px solid var(--teal-200)}
+.photo{position:relative;z-index:1;width:100%;aspect-ratio:5/4;border-radius:var(--r-lg);background:var(--teal-200);overflow:hidden;box-shadow:0 16px 40px rgba(29,30,33,.16)}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:center 60%;display:block}
+.quote{position:relative;z-index:2;width:86%;margin:calc(-1 * var(--s7)) 0 0 auto;background:var(--surface);border:1px solid var(--teal-200);border-radius:var(--r-md);box-shadow:0 14px 36px rgba(29,30,33,.16);padding:var(--s5) var(--s5) var(--s5) var(--s6)}
 .quote .mark{font-size:56px;line-height:30px;font-weight:800;color:var(--purple-700);display:block;height:26px}
-.quote p{font-weight:600;font-size:16px;line-height:24px}
-.quote cite{display:block;margin-top:var(--s2);font-style:normal;font-size:14px;line-height:20px;color:var(--ink-muted)}
-.sticker{position:absolute;right:0;top:6%;background:var(--surface);border-radius:var(--r-pill);box-shadow:var(--shadow);padding:10px 18px;font-size:14px;line-height:18px;font-weight:600;display:flex;align-items:center;gap:var(--s2)}
-.sticker b{font-size:22px;color:var(--teal-800);font-weight:800}
+.quote p{font-weight:600;font-size:18px;line-height:27px}
+.quote cite{display:block;margin-top:var(--s3);font-style:normal;font-size:14px;line-height:20px;color:var(--ink-muted)}
+.sticker{position:absolute;z-index:3;left:0;top:0;background:var(--surface);border:1px solid var(--teal-200);border-radius:var(--r-pill);box-shadow:0 10px 28px rgba(29,30,33,.16);padding:10px 20px;font-size:14px;line-height:18px;font-weight:600;color:var(--ink);display:flex;align-items:center;gap:var(--s3);white-space:nowrap}
+.sticker b{font-size:20px;color:var(--teal-700);font-weight:800;margin-right:6px}
+.sticker i{width:1px;align-self:stretch;background:var(--teal-200);margin:0 var(--s1)}
 
 /* STATS */
 .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s5)}
@@ -289,8 +290,10 @@ footer{background:var(--paper);border-top:1px solid var(--hairline);padding:var(
   .ih .panel{padding:var(--s7) var(--s5);border-radius:var(--r-md)}
   .ih .shape{width:200px;height:200px;right:-70px;top:-70px}
   .ih .shape.s2{display:none}
-  .quote{width:84%}
-  .sticker{font-size:13px}
+  .quote{width:92%;margin-top:calc(-1 * var(--s6));padding:var(--s5)}
+  .quote p{font-size:17px;line-height:26px}
+  .sticker{font-size:12px;padding:8px 14px;gap:var(--s2)}
+  .sticker b{font-size:17px;margin-right:4px}
   .fg4{grid-template-columns:repeat(2,minmax(0,1fr))}
   .point{padding:var(--s5) 0 var(--s8)}
 }
@@ -433,11 +436,11 @@ footer{background:var(--paper);border-top:1px solid var(--hairline);padding:var(
       <div class="blob b" aria-hidden="true"></div>
       <div class="blob c" aria-hidden="true"></div>
       <div class="photo"><img src="images/hero-sharing-food.jpg" width="1400" height="1320" fetchpriority="high" alt="A volunteer in gloves hands a wrapped meal to a neighbor at outreach"></div>
-      <div class="sticker"><b>0</b> outreach nights missed</div>
+      <div class="sticker"><span><b id="streak">598</b> outreaches in a row</span><i aria-hidden="true"></i><span><b id="cancelled">0</b> cancelled</span></div>
       <div class="quote">
         <span class="mark">&ldquo;</span>
-        <p>Seeing you out here every week makes it easier for me to be out here.</p>
-        <cite>Neighbor, The Parkway, summer 2021</cite>
+        <p>We don’t ask what brought you here. We ask what you need tonight.</p>
+        <cite>The Everywhere Project</cite>
       </div>
     </div>
   </div>
@@ -908,6 +911,22 @@ document.getElementById('contact-form').addEventListener('submit', function(e){
   ok.textContent = 'Your email app should open with the message ready. If it doesn\'t, write to '+to+'.';
 });
 }
+</script>
+<script>
+/* Outreach streak: every Wednesday (LOVE Park) and Saturday (Kensington) outreach since TEP
+   officially started in March 2021. Counts up automatically once each outreach day ends.
+   If an outreach is ever cancelled: add 1 to CANCELLED, set count to 0 and asOf to that date. */
+(function(){
+  var STREAK={count:0,asOf:'2021-02-28'}, CANCELLED=0; // streak starts counting the day after asOf
+  var el=document.getElementById('streak'); if(!el) return;
+  // Today's date in Philadelphia; an outreach counts once its day is over.
+  var p=new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date()).split('-');
+  var today=Date.UTC(+p[0],+p[1]-1,+p[2]);
+  var a=STREAK.asOf.split('-'), d=Date.UTC(+a[0],+a[1]-1,+a[2])+864e5, n=STREAK.count;
+  for(;d<today;d+=864e5){var w=new Date(d).getUTCDay(); if(w===3||w===6) n++;}
+  el.textContent=n.toLocaleString('en-US');
+  var c=document.getElementById('cancelled'); if(c) c.textContent=CANCELLED;
+})();
 </script>
 </body>
 </html>
